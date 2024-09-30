@@ -1,0 +1,31 @@
+.paineis{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.paineis .base img{
+    width: 100%;
+}
+
+.paineis .edit{
+    display: flex;
+    position: relative;
+}
+
+.paineis .hover{
+    position: absolute;
+    opacity: 0;
+    transition: 2s;
+    transition-delay: 0.2s;
+}
+
+.paineis .hover img{
+    width: 100%;
+}
+
+.hover:hover{
+    transition: 0.8s;
+    opacity: 1;
+}

@@ -1,0 +1,120 @@
+@font-face {
+    font-family: tipo1;
+    src: url(OTF/Auge-Trial-Black.otf);
+}
+
+@font-face {
+    font-family: tipo2;
+    src: url(OTF/Auge-Trial-Regular.otf);
+}
+
+@font-face {
+    font-family: tipo3;
+    src: url(OTF/Auge-Trial-Bold.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: tipo2;
+}
+
+@keyframes fade-up{
+    0%{
+        opacity: 0;
+        transform: translateY(30px) scale(0.7);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+
+@keyframes fade-down{
+    0%{
+        transform: translateY(-10vw);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+main{
+    animation: fade-up 0.8s;
+}
+
+body{
+    background-color: rgba(224, 203, 203, 1);
+}
+
+a{
+    transition: 0.4s;
+    text-decoration: none;
+    color: rgba(42, 22, 14, 1);
+}
+
+.navBar a{
+    color: rgba(42, 22, 14, 1);
+    text-align: center;
+}
+
+header .navBar{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    justify-content: space-between;
+    z-index: 3;
+    backdrop-filter: blur(10px);
+    padding: 10px 20px 10px 20px;
+    background-color: rgba(224, 203, 203, 0.6);
+}
+
+.navBar .foto{
+    width: 3rem;
+}
+
+.navBar .foto img{
+    height: auto;
+    border: 0.1vw solid rgba(42, 22, 14, 1);
+    border-radius: 50vw;
+    transition: 0.25s ease-in-out;
+}
+
+.navBar .foto img:hover{
+    background-color: rgba(33, 60, 101, 1);
+    transition: 0.25s ease-in-out;
+}
+
+.navBar .foto2{
+    width: 3rem;
+}
+
+.navBar h2{
+    font-family: tipo1;
+    font-size: 1.5rem;
+    left: 0;
+    transition: font-weight .5s ease-in-out;
+}
+
+
+.navBar .icon{
+    width: 2rem;
+    transition: 0.25s ease-in-out;
+}
+
+.navBar .icon:hover{
+    transition: 0.15s ease-in-out;
+    filter: invert(0.4);
+}
+
+.navBar img{
+    width: 100%;
+}
+
