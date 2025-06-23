@@ -16,23 +16,18 @@
 }
 
 .descricao p{
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
-.descricao a{
+.descricao a h2{
     font-size: 1.2rem;
-    border: 0.1vw solid rgba(42, 22, 14, 1);
-    box-shadow: -0.3vw 0.3vw rgba(42, 22, 14, 1);
     padding: 1rem;
-    border-radius: 2rem;
-    transition: 0.5s;
+    color: rgba(42, 22, 14, 1);
 }
 
-.descricao a:hover{
-    transition: 0.5s;
-    background-color: rgba(33, 60, 101, 1);
-    color: rgba(224, 203, 203, 1);
-    box-shadow: -0.5vw 0.5vw rgba(42, 22, 14, 1);
+.descricao a h2:hover{
+    color: rgba(33, 60, 101, 1);
+    font-style: italic;
 }
 
 .videoDesigns{
