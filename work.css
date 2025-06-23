@@ -33,40 +33,29 @@ img{
 }
 
 .box h2{
-    font-family: tipo3;
-    font-size: 20px;
+    font-size: 2rem;
+    color: rgba(42, 22, 14, 1);
 }
 
-.box h3{
-    font-size: 15px;
-    font-family: tipo4;
-}
-
-.box h2, .box h3 {
-    position: relative;
-    overflow: hidden;
-}
-
-.box h2::after, .box h3::after {
-    content: '';
-    position: absolute;
-    bottom: 0; /* Position the underline below the text */
-    left: 0;
-    width: 0;
-    height: 1px; /* Thickness of the underline */
-    background-color: rgba(42, 22, 14, 1); /* Color of the underline */
-    transition: width 0.3s ease; /* Animation duration and easing */
-}
-
-/* Trigger the underline animation when hovering over the box */
-.box:hover h2::after, .box:hover h3::after {
-    width: 100%; /* Expand underline on hover */
+.box p{
+    font-size: 1.5rem;
+    color: rgba(42, 22, 14, 1);
 }
 
 .reveal.active{
     transition-duration: 0.8s;
     opacity: 1;
 }
+
+.reveal.active:hover{
+    opacity: 0.8;
+
+    .box h2{
+        color: rgba(33, 60, 101, 1);
+        font-style: italic;
+    }
+}
+
 
 @media (max-width: 1200px) {
     .portfolio{

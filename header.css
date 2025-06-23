@@ -1,21 +1,6 @@
 @font-face {
-    font-family: tipo1;
-    src: url(OTF/Auge-Trial-Black.otf);
-}
-
-@font-face {
-    font-family: tipo2;
-    src: url(OTF/Auge-Trial-Regular.otf);
-}
-
-@font-face {
-    font-family: tipo3;
-    src: url(OTF/Auge-Trial-Bold.otf);
-}
-
-@font-face {
-    font-family: tipo4;
-    src: url(OTF/Auge-Trial-Light.otf);
+    font-family: futura;
+    src: url(fonts/futura\ light\ bt.ttf);
 }
 
 *{
@@ -23,7 +8,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family: tipo2;
+    font-family: futura;
 }
 
 @keyframes fade-up{
@@ -59,6 +44,15 @@ body{
 a{
     transition: 0.4s;
     text-decoration: none;
+}
+
+h2{
+    font-family: DM Serif Display, serif;
+}
+
+p{
+    font-family: futura;
+    font-size: 1.2rem;
     color: rgba(42, 22, 14, 1);
 }
 
@@ -79,40 +73,33 @@ header .navBar{
     padding: 10px 20px 10px 20px;
 }
 
-.navBar .foto{
-    width: 3rem;
-}
-
-.navBar .foto img{
+.navBar .logo img{
     height: auto;
-    border: 0.1vw solid rgba(42, 22, 14, 1);
-    border-radius: 50vw;
-    transition: 0.25s ease-in-out;
-}
-
-.navBar .foto img:hover{
-    background-color: rgba(33, 60, 101, 1);
-    transition: 0.25s ease-in-out;
-}
-
-.navBar .foto2{
-    width: 3rem;
+    width: 5rem;
 }
 
 .navBar h2{
-    font-family: tipo1;
     font-size: 1.5rem;
     left: 0;
-    transition: font-weight .5s ease-in-out;
 }
 
+.navBar h2:hover{
+    color: rgba(33, 60, 101, 1);
+        font-style: italic;
+}
 
 .navBar .icon{
-    width: 2rem;
+    width: 6rem;
     transition: 0.25s ease-in-out;
+    right: 0;
+    display: flex;
 }
 
-.navBar .icon:hover{
+.navBar .icon a{
+    margin: 0 10px 0 0;
+}
+
+.navBar .icon a:hover{
     transition: 0.15s ease-in-out;
     filter: invert(0.4);
 }
