@@ -9,6 +9,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: futura;
+    transition: 0.3s;
 }
 
 @keyframes fade-up{
@@ -71,6 +72,8 @@ header .navBar{
     justify-content: space-between;
     z-index: 3;
     padding: 10px 20px 10px 20px;
+    background-color: rgba(224, 203, 203, 1);
+    border-bottom: 1px solid rgba(42, 22, 14, 1);
 }
 
 .navBar .logo img{

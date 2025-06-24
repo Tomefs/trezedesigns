@@ -6,7 +6,6 @@
     column-count: 2;
     column-gap: 30px;
     padding: 80px 15px 15px 15px;
-    row-gap: 1rem;
 }
 
 .box{
@@ -38,7 +37,7 @@ img{
 }
 
 .box p{
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: rgba(42, 22, 14, 1);
 }
 
@@ -50,7 +49,7 @@ img{
 .reveal.active:hover{
     opacity: 0.8;
 
-    .box h2{
+    .box h2, p{
         color: rgba(33, 60, 101, 1);
         font-style: italic;
     }

@@ -1,3 +1,9 @@
+main{
+    position: relative;
+    display: flex;
+    padding: 80px 15px 15px 15px;
+}
+
 .vid{
     width: 100%;
     height: auto;
@@ -6,22 +12,21 @@
 }
 
 .vid video{
-    width: 60%;
+    width: 50%;
     text-align: center;
 }
 
 .descricao{
-    text-align: center;
-    padding: 5rem 1rem 2rem 1rem;
+    position: fixed;
+    width: 20%;
 }
 
 .descricao p{
-    font-size: 2rem;
+    font-size: 20px;
 }
 
 .descricao a h2{
     font-size: 1.2rem;
-    padding: 1rem;
     color: rgba(42, 22, 14, 1);
 }
 
@@ -30,43 +35,46 @@
     font-style: italic;
 }
 
-.videoDesigns{
+.Animations{
+    position: relative;
+    width: 70%;
+    column-count: 1;
+    left: 25%;
+}
+
+.Animations img{
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 2rem 0 2rem 0;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
-.videoDesigns img{
-    width: 50%;
-    padding: 1rem;
-}
-
-.printDesigns .print{
-    padding: 2rem 5rem 2rem 5rem;
-}
-
-.printDesigns .print img{
+.Animations video{
+    display: inline-block;
     width: 100%;
+    height: auto;
+    margin-bottom: 15px;
 }
 
 @media (max-width: 800px) {
+    main{
+        flex-direction: column;
+        padding: 80px 15px 15px 15px;
+    }
+
     .vid video{
         width: 100%;
     }
-    .videoDesigns{
-        display: grid;
-        width: 100%;
-        justify-content: center;
+
+    .descricao{
+        position: relative;
+        width: 60%;
+        padding: 0 0 1rem 0;
     }
-    .videoDesigns img{
-        width: 100%;
-        padding-top: 1rem;
+
+    .descricao p{
+        font-size: 1.2rem;
     }
-    .printDesigns .print{
-        padding: 0; 
+
+    .Animations{
+        width: 100%;
+        left: 0;
     }
 }
