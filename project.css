@@ -65,7 +65,7 @@ main{
 
     .descricao{
         position: relative;
-        width: 60%;
+        width: 100%;
         padding: 0 0 1rem 0;
     }
 

@@ -12,7 +12,7 @@ body {
 }
 
 .menu .logo{
-    width: 5rem;
+    width: 6rem;
 }
 
 .menu .logo img{
@@ -32,15 +32,15 @@ body {
 }
 
 button{
-    border: none;
     background-color: rgba(224, 203, 203, 1);
-    right: 0;
+    border: none;
+    cursor: pointer;
+    font-style: italic;
 }
 
 button:hover{
     h2{
         color: rgba(33, 60, 101, 1);
-        font-style: italic;
     }
 }
 
@@ -48,4 +48,10 @@ button:hover{
     text-align: center;
     font-size: 60px;
     color: rgba(42, 22, 14, 1);
+}
+
+@media (max-width: 800px) {
+    .menu .text p, h2{
+    font-size: 2rem;
+}
 }
