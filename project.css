@@ -28,11 +28,11 @@ main{
 .descricao a h2{
     font-size: 1.2rem;
     color: rgba(42, 22, 14, 1);
+    font-style: italic;
 }
 
 .descricao a h2:hover{
     color: rgba(33, 60, 101, 1);
-    font-style: italic;
 }
 
 .Animations{
