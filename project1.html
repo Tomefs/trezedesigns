@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>projecto</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' href='header.css'>
-    <link rel='stylesheet' href='project.css'>
-    <script src='main.js'></script>
-</head>
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="project.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
     <div class="home">
-        <header>
+      <header>
         <div class="navBar">
-          <a href="index.html"><h2>Tomé Simões</h2></a>
+          <div class="logo">
+            <img src="icons/logo_BAR.png" alt="desenho" title="mapache" />
+          </div>
+          <a href="index.html"
+            ><h2>Tomé Simões</h2>
+            <p>Graphic Designer</p></a
+          >
           <div class="icon">
             <a
               href="https://www.linkedin.com/in/tom%C3%A9-sim%C3%B5es-532624321/"
@@ -26,64 +32,97 @@
           </div>
         </div>
       </header>
-    <main>
+      <main>
         <section class="descricao">
-            <p>Created with Processing, this project resulted in a set of unique, rich, and expressive visual pieces inspired by the work and elements
-              that inspired composer Kaija Saariaho, where natural elements, color, light, visual arts, and technology merge into a single
-              collection of constantly changing artistic objects that give image to the artist's sound compositions.</p>
+          <h2>Kaija's Flowers</h2>
+          <br />
+          <p>
+            Project created as part of the Generative Design course
+            in the Design and Multimedia Master's Degree program at the University of
+            Coimbra
+          </p>
+          <br />
+          <p>
+            This sketch in Processing creates a dynamic audiovisual composition
+            that combines real-time video , ASCII art, and graphic animations.
+          </p>
+          <br />
+          <p>
+            The basis of the project are videos of plants, chosen specifically
+            for their dark backgrounds, which are loaded and played in a
+            continuous loop, with the aim of highlighting the colors of the
+            natural elements, filters, and lighting effects. This conversion
+            transforms the video into a living typographic representation, where
+            characters replace pixels and contribute to a retro digital artistic
+            effect. Simultaneously, the application continuously generates small
+            animated rectangles, whose position, size, and effects are random
+            within a given range, but conditioned by the color of the video
+            image. Each rectangle displays an excerpt from the original video at
+            that position and can apply graphic effects such as dilation,
+            erosion, color inversion, or posterization. These rectangles have a
+            limited duration and gradually disappear, creating a dynamic and
+            ephemeral visual effect.
+          </p>
+          <br />
+          <p>
+            Inspired by the work and elements that inspired composer Kaija
+            Saariaho, where natural elements, color, light, visual arts and
+            technology merge into a single collection of unique and constantly
+            changing artistic objects that give image to the artist's sound
+            compositions.
+          </p>
         </section>
         <section class="Animations">
-            <video autoplay loop muted>
-             <source src="UC/DG/anim1.mp4" type="video/mp4">
-             Your browser does not support HTML video.
-            </video>
-            <video autoplay loop muted>
-             <source src="UC/DG/anim2.mp4" type="video/mp4">
-             Your browser does not support HTML video.
-            </video>
-            <video autoplay loop muted>
-             <source src="UC/DG/anim3.mp4" type="video/mp4">
-             Your browser does not support HTML video.
-            </video>
-            <video autoplay loop muted>
-             <source src="UC/DG/anim4.mp4" type="video/mp4">
-             Your browser does not support HTML video.
-            </video>
-            <video autoplay loop muted>
-             <source src="UC/DG/anim5.mp4" type="video/mp4">
-             Your browser does not support HTML video.
-            </video>
-            <video autoplay loop muted>
-             <source src="UC/DG/anim6.mp4" type="video/mp4">
-             Your browser does not support HTML video.
-            </video>
-            <video autoplay loop muted>
-             <source src="UC/DG/anim7.mp4" type="video/mp4">
-             Your browser does not support HTML video.
-            </video>
-            <video autoplay loop muted>
-             <source src="UC/DG/anim8.mp4" type="video/mp4">
-             Your browser does not support HTML video.
-            </video>
-            <video autoplay loop muted>
-             <source src="UC/DG/anim9.mp4" type="video/mp4">
-             Your browser does not support HTML video.
-            </video>
-            <video autoplay loop muted>
-             <source src="UC/DG/anim10.mp4" type="video/mp4">
-             Your browser does not support HTML video.
-            </video>
-            <video autoplay loop muted>
-             <source src="UC/DG/anim11.mp4" type="video/mp4">
-             Your browser does not support HTML video.
-            </video>
-            <video autoplay loop muted>
-             <source src="UC/DG/anim12.mp4" type="video/mp4">
-             Your browser does not support HTML video.
-            </video>
+          <video autoplay loop muted>
+            <source src="UC/DG/anim1.mp4" type="video/mp4" />
+            Your browser does not support HTML video.
+          </video>
+          <video autoplay loop muted>
+            <source src="UC/DG/anim2.mp4" type="video/mp4" />
+            Your browser does not support HTML video.
+          </video>
+          <video autoplay loop muted>
+            <source src="UC/DG/anim3.mp4" type="video/mp4" />
+            Your browser does not support HTML video.
+          </video>
+          <video autoplay loop muted>
+            <source src="UC/DG/anim4.mp4" type="video/mp4" />
+            Your browser does not support HTML video.
+          </video>
+          <video autoplay loop muted>
+            <source src="UC/DG/anim5.mp4" type="video/mp4" />
+            Your browser does not support HTML video.
+          </video>
+          <video autoplay loop muted>
+            <source src="UC/DG/anim6.mp4" type="video/mp4" />
+            Your browser does not support HTML video.
+          </video>
+          <video autoplay loop muted>
+            <source src="UC/DG/anim7.mp4" type="video/mp4" />
+            Your browser does not support HTML video.
+          </video>
+          <video autoplay loop muted>
+            <source src="UC/DG/anim8.mp4" type="video/mp4" />
+            Your browser does not support HTML video.
+          </video>
+          <video autoplay loop muted>
+            <source src="UC/DG/anim9.mp4" type="video/mp4" />
+            Your browser does not support HTML video.
+          </video>
+          <video autoplay loop muted>
+            <source src="UC/DG/anim10.mp4" type="video/mp4" />
+            Your browser does not support HTML video.
+          </video>
+          <video autoplay loop muted>
+            <source src="UC/DG/anim11.mp4" type="video/mp4" />
+            Your browser does not support HTML video.
+          </video>
+          <video autoplay loop muted>
+            <source src="UC/DG/anim12.mp4" type="video/mp4" />
+            Your browser does not support HTML video.
+          </video>
         </section>
-
-    </main>
+      </main>
     </div>
-</body>
+  </body>
 </html>

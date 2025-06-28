@@ -3,14 +3,15 @@
 }
 
 .portfolio{
-    column-count: 2;
+    column-count: 3;
     column-gap: 30px;
-    padding: 80px 15px 15px 15px;
 }
 
 .box{
+    position: relative;
     display: inline-block;
     width: 100%;
+    overflow: hidden;
 }
 
 .reveal{
@@ -22,8 +23,15 @@
     margin-bottom: 15px;
 }
 
-img{
+.portfolio img, video{
     display:block;
+    width: 100%;
+}
+
+.portfolio video{
+    display: none;
+    top: 0;
+    position: absolute;
     width: 100%;
 }
 
@@ -31,13 +39,7 @@ img{
     padding: 15px, 0, 0, 0;
 }
 
-.box h2{
-    font-size: 2rem;
-    color: rgba(42, 22, 14, 1);
-}
-
-.box p{
-    font-size: 2rem;
+.box h2, p{
     color: rgba(42, 22, 14, 1);
 }
 
@@ -51,7 +53,10 @@ img{
 
     .box h2, p{
         color: rgba(33, 60, 101, 1);
-        font-style: italic;
+    }
+
+    video {
+        display: block;
     }
 }
 
@@ -66,10 +71,7 @@ img{
     .portfolio{
         column-count: 3;
     }
-    .box h2 {
-        font-size: 2vw;
-    }
-    .box h3 {
-        font-size: 1vw;
+    .box h2, p {
+        font-size: 30px;
     }
 }

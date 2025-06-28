@@ -8,16 +8,16 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 6rem;
 }
 
-.menu .logo{
-    width: 6rem;
+.menu .logo {
+    display: none;
+  width: 6rem;
 }
 
-.menu .logo img{
-    width: 100%;
-    height: auto;
+.menu .logo img {
+  width: 100%;
+  height: auto;
 }
 
 .menu .text{
@@ -54,4 +54,7 @@ button:hover{
     .menu .text p, h2{
     font-size: 2rem;
 }
+    .menu .logo {
+        display: block;
+    }
 }

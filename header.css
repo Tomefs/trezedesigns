@@ -1,113 +1,126 @@
 @font-face {
-    font-family: futura;
-    src: url(fonts/futura\ light\ bt.ttf);
+  font-family: futura;
+  src: url(fonts/futura\ light\ bt.ttf);
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    font-family: futura;
-    transition: 0.3s;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: futura;
+  transition: 0.3s;
 }
 
-@keyframes fade-up{
-    0%{
-        opacity: 0;
-        transform: translateY(30px) scale(0.7);
-    }
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.7);
+  }
 
-    100%{
-        opacity: 1;
-        transform: translateY(0px) scale(1);
-    }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
 }
 
-@keyframes fade-down{
-    0%{
-        transform: translateY(-10vw);
-    }
+@keyframes fade-down {
+  0% {
+    transform: translateY(-10vw);
+  }
 
-    100%{
-        transform: translateY(0px);
-    }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
-main{
-    animation: fade-up 0.8s;
+main {
+  animation: fade-up 0.8s;
+  padding: 120px 20px 20px 20px;
 }
 
-body{
-    background-color: rgba(224, 203, 203, 1);
+body {
+  background-color: rgba(224, 203, 203, 1);
 }
 
-a{
-    transition: 0.4s;
-    text-decoration: none;
+a {
+  transition: 0.4s;
+  text-decoration: none;
 }
 
-h2{
-    font-family: DM Serif Display, serif;
+h2 {
+  font-family: DM Serif Display, serif;
 }
 
-p{
-    font-family: futura;
-    font-size: 1.2rem;
-    color: rgba(42, 22, 14, 1);
+p {
+  font-family: futura;
+  font-size: 1rem;
+  color: rgba(42, 22, 14, 1);
 }
 
-.navBar a{
-    color: rgba(42, 22, 14, 1);
-    text-align: center;
+.navBar a {
+  color: rgba(42, 22, 14, 1);
+  text-align: center;
 }
 
-header .navBar{
-    position: fixed;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    text-align: center;
-    justify-content: space-between;
-    z-index: 3;
-    padding: 10px 20px 10px 20px;
-    background-color: rgba(224, 203, 203, 1);
-    border-bottom: 1px solid rgba(42, 22, 14, 1);
+header .navBar {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  justify-content: space-between;
+  z-index: 3;
+  padding: 10px 20px 10px 20px;
+  background-color: rgba(224, 203, 203, 1);
+  border-bottom: 1px solid rgba(42, 22, 14, 1);
 }
 
-.navBar .logo img{
-    height: auto;
-    width: 5rem;
+header .logo {
+  width: 5rem;
 }
 
-.navBar h2{
-    font-size: 1.5rem;
-    left: 0;
+header.logo img {
+  width: 100%;
+  height: auto;
 }
 
-.navBar h2:hover{
-    color: rgba(33, 60, 101, 1);
-        font-style: italic;
+.navBar h2 {
+  font-size: 1.5rem;
+  left: 0;
 }
 
-.navBar .icon{
-    width: 6rem;
-    transition: 0.25s ease-in-out;
-    right: 0;
-    display: flex;
+.navBar h2:hover {
+  color: rgba(33, 60, 101, 1);
+  font-style: italic;
 }
 
-.navBar .icon a{
-    margin: 0 10px 0 0;
+.navBar .icon {
+  width: 6rem;
+  transition: 0.25s ease-in-out;
+  right: 0;
+  display: flex;
 }
 
-.navBar .icon a:hover{
-    transition: 0.15s ease-in-out;
-    filter: invert(0.4);
+.navBar .icon a {
+  margin: 0 10px 0 0;
 }
 
-.navBar img{
-    width: 100%;
+.navBar .icon a:hover {
+  transition: 0.15s ease-in-out;
+  filter: invert(0.4);
 }
 
+.navBar img {
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  header .navBar h2, p{
+    text-align: left;
+  }
+  header .logo {
+    display: none;
+  }
+}
