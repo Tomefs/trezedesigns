@@ -4,7 +4,8 @@
 
 .portfolio{
     column-count: 3;
-    column-gap: 30px;
+    column-gap: 10px;
+    row-gap: 15px;
 }
 
 .box{
