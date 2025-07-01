@@ -33,12 +33,12 @@
   width: 60%;
   column-count: 1;
   column-gap: 10px;
-  row-gap: 15px;
   left: 30%;
 }
 
 .Animations img {
   width: 100%;
+  margin-top: 10px;
 }
 
 .Animations video {
@@ -75,4 +75,19 @@
   .descricao p {
     font-size: 16px;
   }
+}
+
+@media (max-width: 1200px) {
+    .Animations{
+        column-count: 1;
+    }
+}
+
+@media (min-width:1920px) {
+    .Animations{
+        column-count: 2;
+    }
+    .descricao h2, p {
+        font-size: 40px;
+    }
 }

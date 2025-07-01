@@ -94,7 +94,7 @@ header.logo img {
 
 .navBar h2:hover {
   color: rgba(33, 60, 101, 1);
-  font-style: italic;
+  text-decoration: underline rgba(33, 60, 101, 1);
 }
 
 .navBar .icon {
@@ -124,4 +124,22 @@ header.logo img {
   header .logo {
     display: none;
   }
+}
+
+@media (max-width: 1200px) {
+    .navBar h2{
+        font-size: 2rem;
+    }
+    .navBar p{
+        font-size: 20px;
+    }
+}
+
+@media (min-width:1920px) {
+    .Animations{
+        column-count: 2;
+    }
+    .descricao h2, p {
+        font-size: 40px;
+    }
 }
