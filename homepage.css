@@ -10,21 +10,9 @@ body {
     align-items: center;
 }
 
-.menu .logo {
-    display: none;
-  width: 6rem;
-}
-
-.menu .logo img {
-  width: 100%;
-  height: auto;
-}
-
 .menu .text{
     display: table-column;
-    width: 90%;
     text-align: left;
-    padding: 1rem;
 }
 
 .menu .text p, h2{
@@ -53,9 +41,6 @@ button:hover{
 
 @media (max-width: 800px) {
     .menu .text p, h2{
-    font-size: 2rem;
-}
-    .menu .logo {
-        display: block;
+       font-size: 2rem;
     }
 }

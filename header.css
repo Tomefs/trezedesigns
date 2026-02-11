@@ -1,14 +1,20 @@
 @font-face {
-  font-family: futura;
-  src: url(fonts/futura\ light\ bt.ttf);
+  font-family: ltsuperior;
+  src: url(fonts/LTSuperior-Regular.otf);
 }
+
+@font-face {
+  font-family: ltsuperiorBold;
+  src: url(fonts/LTSuperior-ExtraBold.otf);
+}
+
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: futura;
+  font-family: ltsuperior;
   transition: 0.3s;
 }
 
@@ -36,7 +42,7 @@
 
 main {
   animation: fade-up 1s ease-in-out;
-  padding: 120px 20px 20px 20px;
+  padding: 160px 100px 10px 100px;
 }
 
 body {
@@ -49,18 +55,19 @@ a {
 }
 
 h2 {
-  font-family: DM Serif Display, serif;
+  font-family: ltsuperiorBold;
+  color: rgba(33, 60, 101, 1);
 }
 
 p {
-  font-family: futura;
+  font-family: ltsuperior;
   font-size: 1rem;
   color: rgba(42, 22, 14, 1);
 }
 
 .navBar a {
-  color: rgba(42, 22, 14, 1);
-  text-align: center;
+  color: rgba(224, 203, 203, 1);
+  text-align: left;
 }
 
 header .navBar {
@@ -73,65 +80,44 @@ header .navBar {
   text-align: center;
   justify-content: space-between;
   z-index: 3;
-  padding: 10px 20px 10px 20px;
-  background-color: rgba(224, 203, 203, 1);
-  border-bottom: 1px solid rgba(42, 22, 14, 1);
+  padding: 30px 100px 30px 100px;
+  background-color: rgba(33, 60, 101, 1);
 }
 
-header .logo {
-  width: 5rem;
-}
-
-header.logo img {
-  width: 100%;
-  height: auto;
-}
-
-.navBar h2 {
+.navBar h2, .navBar p {
   font-size: 1.5rem;
   left: 0;
+  color: rgba(224, 203, 203, 1);
 }
 
-.navBar h2:hover {
-  color: rgba(33, 60, 101, 1);
-  text-decoration: underline rgba(33, 60, 101, 1);
+.navBar .icon p:hover {
+  text-decoration: underline rgba(224, 203, 203, 1);
+  text-decoration-thickness: 1.5px;
 }
 
-.navBar .icon {
-  width: 6rem;
-  transition: 0.25s ease-in-out;
-  right: 0;
-  display: flex;
-}
-
-.navBar .icon a {
-  margin: 0 10px 0 0;
-}
-
-.navBar .icon a:hover {
-  transition: 0.15s ease-in-out;
-  filter: invert(0.4);
-}
-
-.navBar img {
-  width: 100%;
-}
 
 @media (max-width: 800px) {
+  main {
+    animation: fade-up 1s ease-in-out;
+    padding: 130px 10px 20px 10px;
+  }
+  header .navBar {
+    padding: 30px 20px 30px 20px;
+  }
   header .navBar h2, p{
     text-align: left;
-  }
-  header .logo {
-    display: none;
   }
 }
 
 @media (max-width: 1200px) {
+  header .navBar {
+    padding: 30px 20px 30px 20px;
+  }
     .navBar h2{
-        font-size: 2rem;
+        font-size: 1.2rem;
     }
     .navBar p{
-        font-size: 20px;
+        font-size: 15px;
     }
 }
 
