@@ -42,7 +42,7 @@
 
 main {
   animation: fade-up 1s ease-in-out;
-  padding: 160px 100px 10px 100px;
+  padding: 160px 100px 200px 100px;
 }
 
 body {
@@ -65,12 +65,12 @@ p {
   color: rgba(42, 22, 14, 1);
 }
 
-.navBar a {
+.navBar a, .bar a {
   color: rgba(224, 203, 203, 1);
   text-align: left;
 }
 
-header .navBar {
+header .navBar{
   animation: fade-down 1s ease-in-out;
   position: fixed;
   width: 100%;
@@ -84,24 +84,36 @@ header .navBar {
   background-color: rgba(33, 60, 101, 1);
 }
 
-.navBar h2, .navBar p {
+.navBar h2, .navBar p, .bar p, .bar h2 {
   font-size: 1.5rem;
   left: 0;
   color: rgba(224, 203, 203, 1);
 }
 
-.navBar .icon p:hover {
+.navBar .icon p, .bar .icon p:hover {
   text-decoration: underline rgba(224, 203, 203, 1);
   text-decoration-thickness: 1.5px;
+}
+
+footer .bar{
+  animation: fade-down 1s ease-in-out;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  justify-content: space-between;
+  padding: 100px 100px 30px 100px;
+  background-color: rgba(33, 60, 101, 1);
 }
 
 
 @media (max-width: 800px) {
   main {
     animation: fade-up 1s ease-in-out;
-    padding: 130px 10px 20px 10px;
+    padding: 130px 20px 20px 20px;
   }
-  header .navBar {
+  header .navBar, footer .bar {
     padding: 30px 20px 30px 20px;
   }
   header .navBar h2, p{

@@ -11,7 +11,7 @@
 
 .descricao {
   position: fixed;
-  width: 25%;
+  width: 30%;
 }
 
 .descricao p {
@@ -51,7 +51,7 @@
 @media (max-width: 800px) {
   main {
     flex-direction: column;
-    padding: 80px 15px 15px 15px;
+    padding: 130px 15px 15px 15px;
   }
 
   .vid video {
@@ -61,7 +61,6 @@
   .descricao {
     position: relative;
     width: 100%;
-    padding: 0 0 1rem 0;
   }
 
   .Animations {
@@ -81,6 +80,12 @@
     .Animations{
         column-count: 1;
     }
+    main {
+    padding: 130px 20px 30px 20px;
+  }
+  .descricao {
+    width: 35%;
+  }
 }
 
 @media (min-width:1920px) {
