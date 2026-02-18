@@ -85,12 +85,12 @@ header .navBar{
 }
 
 .navBar h2, .navBar p, .bar p, .bar h2 {
-  font-size: 1.5rem;
+  font-size: 1rem;
   left: 0;
   color: rgba(224, 203, 203, 1);
 }
 
-.navBar .icon p, .bar .icon p:hover {
+.navBar p:hover, .bar p:hover {
   text-decoration: underline rgba(224, 203, 203, 1);
   text-decoration-thickness: 1.5px;
 }
@@ -103,7 +103,7 @@ footer .bar{
   justify-items: center;
   text-align: center;
   justify-content: space-between;
-  padding: 100px 100px 30px 100px;
+  padding: 30px 100px 30px 100px;
   background-color: rgba(33, 60, 101, 1);
 }
 
