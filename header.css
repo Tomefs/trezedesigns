@@ -46,7 +46,7 @@ main {
 }
 
 body {
-  background-color: rgba(224, 203, 203, 1);
+  background-color: whitesmoke;
 }
 
 a {
@@ -56,17 +56,16 @@ a {
 
 h2 {
   font-family: ltsuperiorBold;
-  color: rgba(33, 60, 101, 1);
+  color: black;
 }
 
 p {
   font-family: ltsuperior;
   font-size: 1rem;
-  color: rgba(42, 22, 14, 1);
 }
 
 .navBar a, .bar a {
-  color: rgba(224, 203, 203, 1);
+  color: whitesmoke;
   text-align: left;
 }
 
@@ -80,18 +79,22 @@ header .navBar{
   text-align: center;
   justify-content: space-between;
   z-index: 3;
-  padding: 30px 100px 30px 100px;
-  background-color: rgba(33, 60, 101, 1);
+  padding: 20px 100px 20px 100px;
+  background-color: black;
+}
+
+.navBar img {
+  width: 25px;
 }
 
 .navBar h2, .navBar p, .bar p, .bar h2 {
   font-size: 1rem;
   left: 0;
-  color: rgba(224, 203, 203, 1);
+  color: whitesmoke;
 }
 
 .navBar p:hover, .bar p:hover {
-  text-decoration: underline rgba(224, 203, 203, 1);
+  text-decoration: underline;
   text-decoration-thickness: 1.5px;
 }
 
@@ -103,8 +106,8 @@ footer .bar{
   justify-items: center;
   text-align: center;
   justify-content: space-between;
-  padding: 30px 100px 30px 100px;
-  background-color: rgba(33, 60, 101, 1);
+  padding: 20px 100px 20px 100px;
+  background-color: black;
 }
 
 
