@@ -1,11 +1,16 @@
 @font-face {
   font-family: ltsuperior;
-  src: url(timesnewroman-bold.ttf);
+  src: url(times-new-roman-bold.ttf);
 }
 
 @font-face {
   font-family: ltsuperiorBold;
   src: url(fonts/Satoshi-Black.otf);
+}
+
+@font-face {
+  font-family: satoshi;
+  src: url(fonts/Satoshi-Regular.otf);
 }
 
 
@@ -80,6 +85,7 @@ header .navBar{
   justify-content: space-between;
   z-index: 3;
   padding: 20px 100px 20px 100px;
+  background-color: whitesmoke;
 }
 
 .navBar img {
@@ -92,9 +98,22 @@ header .navBar{
   color: black;
 }
 
-.navBar p:hover, .bar p:hover {
+.navBar h2{
+  font-family: satoshi;
+}
+
+.navBar p{
+  font-style: italic;
+}
+
+.navBar h2:hover{
   text-decoration: underline;
-  text-decoration-thickness: 1.5px;
+  text-decoration-thickness: 1px;
+}
+
+.navBar p:hover{
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
 }
 
 footer .bar{
@@ -106,6 +125,20 @@ footer .bar{
   text-align: center;
   justify-content: space-between;
   padding: 20px 100px 20px 100px;
+}
+
+footer .bar h2 {
+  font-family: satoshi;
+}
+
+footer h2:hover{
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+footer p:hover{
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
 }
 
 
