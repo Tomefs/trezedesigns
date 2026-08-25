@@ -1,11 +1,11 @@
 @font-face {
   font-family: ltsuperior;
-  src: url(fonts/LTSuperior-Regular.otf);
+  src: url(timesnewroman-bold.ttf);
 }
 
 @font-face {
   font-family: ltsuperiorBold;
-  src: url(fonts/LTSuperior-ExtraBold.otf);
+  src: url(fonts/Satoshi-Black.otf);
 }
 
 
