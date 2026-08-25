@@ -80,7 +80,6 @@ header .navBar{
   justify-content: space-between;
   z-index: 3;
   padding: 20px 100px 20px 100px;
-  background-color: black;
 }
 
 .navBar img {
@@ -90,7 +89,7 @@ header .navBar{
 .navBar h2, .navBar p, .bar p, .bar h2 {
   font-size: 1rem;
   left: 0;
-  color: whitesmoke;
+  color: black;
 }
 
 .navBar p:hover, .bar p:hover {
@@ -107,7 +106,6 @@ footer .bar{
   text-align: center;
   justify-content: space-between;
   padding: 20px 100px 20px 100px;
-  background-color: black;
 }
 
 

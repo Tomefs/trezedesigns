@@ -1,7 +1,3 @@
-#work{
-    background-color: rgba(224, 203, 203, 1);
-}
-
 .portfolio{
     column-count: 3;
     column-gap: 10px;
@@ -45,7 +41,7 @@
 }
 
 .box h2{
-    color: rgba(33, 60, 101, 1);
+    color: black;
 }
 
 .reveal.active{
