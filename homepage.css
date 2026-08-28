@@ -7,16 +7,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: left;
 }
 
 .menu .text{
+    width: 45%;
     display: table-column;
     text-align: left;
-}
-
-.menu .text p, h2{
-    font-size: 2rem;
 }
 
 button{

@@ -47,7 +47,7 @@
 
 main {
   animation: fade-up 1s ease-in-out;
-  padding: 160px 100px 200px 100px;
+  padding: 100px 100px 50px 100px;
 }
 
 body {
@@ -64,9 +64,14 @@ h2 {
   color: black;
 }
 
+h3 {
+  font-family: ltsuperiorBold;
+  color: black;
+}
+
 p {
   font-family: ltsuperior;
-  font-size: 1rem;
+  font-size: 20px;
 }
 
 .navBar a, .bar a {
@@ -86,6 +91,12 @@ header .navBar{
   z-index: 3;
   padding: 20px 100px 20px 100px;
   background-color: whitesmoke;
+}
+
+header .navBar .icon{
+  align-items: center;
+  display: flex;
+  gap: 10px;
 }
 
 .navBar img {
