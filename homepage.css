@@ -36,7 +36,7 @@ button:hover{
 }
 
 @media (max-width: 800px) {
-    .menu .text p, h2{
-       font-size: 2rem;
-    }
+    .menu .text{
+    width: 100%;
+}
 }

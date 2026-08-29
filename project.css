@@ -11,11 +11,11 @@
 
 .descricao {
   position: fixed;
-  width: 30%;
+  width: 20%;
 }
 
 .descricao p {
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .descricao a h2 {
@@ -24,16 +24,17 @@
   font-style: italic;
 }
 
-.descricao a h2:hover {
-  color: rgba(33, 60, 101, 1);
-}
-
 .Animations {
   position: relative;
   width: 60%;
   column-count: 1;
   column-gap: 10px;
   left: 40%;
+}
+
+.Animations .box {
+  column-count: 2;
+  column-gap: 10px;
 }
 
 .Animations img {
@@ -68,6 +69,11 @@
     left: 0;
     column-count: 1;
   }
+
+  .Animations .box {
+    column-count: 1;
+  }
+  
   .paineis {
     display: none;
   }
