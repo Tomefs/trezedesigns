@@ -1,86 +1,87 @@
-.portfolio{
-    column-count: 3;
-    column-gap: 10px;
+.portfolio {
+  column-count: 3;
+  column-gap: 10px;
 }
 
-.box{
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    overflow: hidden;
+.box {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
 }
 
-.reveal{
-    display: flex;
-    position: relative;
-    overflow: hidden;
-    transition-duration: 0.4s;
+.reveal {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.4s;
+  opacity: 0.1;
+  margin-bottom: 10px;
+}
+
+.portfolio img,
+video {
+  display: block;
+  width: 100%;
+}
+
+.portfolio video {
+  display: none;
+  top: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.text {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+  color: whitesmoke;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition-duration: 0.4s;
+}
+
+.reveal.active {
+  transition-duration: 0.8s;
+  opacity: 1;
+  background-color: black;
+}
+
+.reveal.active:hover {
+  img {
     opacity: 0.1;
-    margin-bottom: 10px;
-}
+  }
 
-.portfolio img, video{
-    display:block;
-    width: 100%;
-}
-
-.portfolio video{
-    display: none;
-    top: 0;
-    position: absolute;
-    width: 100%;
-}
-
-.text{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    bottom: 0;
-    color: whitesmoke;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition-duration: 0.4s;
-}
-
-.reveal.active{
-    transition-duration: 0.8s;
+  video {
+    opacity: 0.1;
+    display: block;
+  }
+  .text {
     opacity: 1;
-    background-color: black;
+  }
 }
-
-.reveal.active:hover{
-    img{
-        opacity: 0.1;
-    }
-
-    video {
-        opacity: 0.1;
-        display: block;
-    }
-    .text{
-        opacity: 1;
-    }
-}
-
 
 @media (max-width: 1200px) {
-    .portfolio{
-        column-count: 1;
-    }
-    main {
+  .portfolio {
+    column-count: 1;
+  }
+  main {
     padding: 130px 20px 30px 20px;
-    }
+  }
 }
 
-@media (min-width:1920px) {
-    .portfolio{
-        column-count: 3;
-    }
-    .box h2, p {
-        font-size: 30px;
-    }
+@media (min-width: 1920px) {
+  .portfolio {
+    column-count: 3;
+  }
+  .box h2,
+  p {
+    font-size: 30px;
+  }
 }

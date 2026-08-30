@@ -41,7 +41,7 @@
 
 main {
   animation: fade-up 1s ease-in-out;
-  padding: 100px 50px 100px 50px;
+  padding: 80px 50px 100px 50px;
 }
 
 body {
@@ -55,6 +55,7 @@ a {
 
 h2 {
   font-family: ltsuperiorBold;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -82,18 +83,17 @@ header .navBar{
   text-align: center;
   justify-content: space-between;
   z-index: 3;
-  padding: 20px 50px 20px 50px;
-  background-color: whitesmoke;
+  padding: 20px 50px 0 50px;
 }
 
 header .navBar .icon{
   align-items: center;
   display: flex;
-  gap: 60px;
+  gap: 20px;
 }
 
 .navBar img {
-  width: 25px;
+  width: 30px;
 }
 
 .navBar h2, .navBar p, .bar p, .bar h2 {
@@ -104,10 +104,6 @@ header .navBar .icon{
 
 .navBar h2{
   font-family: ltsuperior;
-}
-
-.navBar p{
-  font-style: italic;
 }
 
 .navBar h2:hover{

@@ -1,42 +1,42 @@
 body {
-    background-color: whitesmoke;
+  background-color: whitesmoke;
 }
 
 .menu {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
 }
 
-.menu .text{
-    width: 45%;
-    display: table-column;
-    text-align: left;
+.menu .text {
+  width: 45%;
+  display: table-column;
+  text-align: left;
 }
 
-button{
-    border: none;
-    cursor: pointer;
-    font-style: italic;
+button {
+  border: none;
+  cursor: pointer;
+  font-style: italic;
 }
 
-button:hover{
-    p{
-        text-decoration: underline;
-        text-decoration-thickness: 1.5px;
-    }
+button:hover {
+  p {
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+  }
 }
 
-.menu a{
-    text-align: center;
-    font-size: 60px;
-    color: rgba(42, 22, 14, 1);
+.menu a {
+  text-align: center;
+  font-size: 60px;
+  color: rgba(42, 22, 14, 1);
 }
 
 @media (max-width: 800px) {
-    .menu .text{
+  .menu .text {
     width: 100%;
-}
+  }
 }
