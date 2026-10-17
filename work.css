@@ -11,16 +11,20 @@
 }
 
 .reveal {
-  display: flex;
+  display: inline-block;
   position: relative;
   overflow: hidden;
-  transition-duration: 0.4s;
-  opacity: 0.1;
   margin-bottom: 10px;
+  vertical-align: top;
+  transition: opacity 0.4s ease;
+}
+
+.js .reveal {
+  opacity: 0.1;
 }
 
 .portfolio img,
-video {
+.portfolio video {
   display: block;
   width: 100%;
 }
@@ -48,23 +52,26 @@ video {
 }
 
 .reveal.active {
-  transition-duration: 0.8s;
   opacity: 1;
   background-color: black;
+  transition-duration: 0.8s;
 }
 
 .reveal.active:hover {
-  img {
-    opacity: 0.1;
-  }
+  opacity: 1;
+}
 
-  video {
-    opacity: 0.1;
-    display: block;
-  }
-  .text {
-    opacity: 1;
-  }
+.reveal.active:hover img,
+.reveal.active:hover video {
+  opacity: 0.4;
+}
+
+.reveal.active:hover video {
+  display: block;
+}
+
+.reveal.active:hover .text {
+  opacity: 1;
 }
 
 @media (max-width: 1200px) {
@@ -81,7 +88,7 @@ video {
     column-count: 3;
   }
   .box h2,
-  p {
-    font-size: 30px;
+  .box p {
+    font-size: 1.5rem;
   }
 }

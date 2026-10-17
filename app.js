@@ -1,19 +1,21 @@
-window.addEventListener('scroll', reveal);
+document.documentElement.classList.add("js");
 
-function reveal(){
-    var reveals = document.querySelectorAll('.box');
+const revealItems = document.querySelectorAll(".reveal");
 
-    for(var i = 0; i < reveals.length; i++){
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 },
+  );
 
-    var windowheight = window.innerHeight;
-    var revealtop = reveals[i].getBoundingClientRect().top;
-    var revealpoint = windowheight/2;
-
-    if(revealtop <= windowheight - revealpoint){
-        reveals[i].classList.add('active');
-    }
-    else{
-        reveals[i].classList.remove('active');
-    } 
-}
+  revealItems.forEach((item) => revealObserver.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add("active"));
 }

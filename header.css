@@ -14,7 +14,6 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: ltsuperior;
-  transition: 0.3s;
 }
 
 @keyframes fade-up {
@@ -49,8 +48,18 @@ body {
 }
 
 a {
-  transition: 0.4s;
   text-decoration: none;
+}
+
+a,
+button {
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
 }
 
 h2 {
@@ -68,12 +77,13 @@ p {
   font-size: 14px;
 }
 
-.navBar a, .bar a {
+.navBar a,
+.bar a {
   color: whitesmoke;
   text-align: left;
 }
 
-header .navBar{
+header .navBar {
   animation: fade-down 1s ease-in-out;
   position: fixed;
   width: 100%;
@@ -86,7 +96,7 @@ header .navBar{
   padding: 20px 50px 0 50px;
 }
 
-header .navBar .icon{
+header .navBar .icon {
   align-items: center;
   display: flex;
   gap: 20px;
@@ -96,27 +106,25 @@ header .navBar .icon{
   width: 30px;
 }
 
-.navBar h2, .navBar p, .bar p, .bar h2 {
+.navBar h2,
+.navBar p,
+.bar p,
+.bar h2 {
   font-size: 1rem;
-  left: 0;
   color: black;
 }
 
-.navBar h2{
+.navBar h2 {
   font-family: ltsuperior;
 }
 
-.navBar h2:hover{
+.navBar h2:hover,
+.navBar p:hover {
   text-decoration: underline;
   text-decoration-thickness: 1px;
 }
 
-.navBar p:hover{
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-footer .bar{
+footer .bar {
   animation: fade-down 1s ease-in-out;
   width: 100%;
   display: flex;
@@ -131,12 +139,8 @@ footer .bar h2 {
   font-family: ltsuperior;
 }
 
-footer h2:hover{
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-footer p:hover{
+footer h2:hover,
+footer p:hover {
   text-decoration: underline;
   text-decoration-thickness: 1px;
 }
@@ -150,7 +154,8 @@ footer p:hover{
   header .navBar, footer .bar {
     padding: 30px 20px 30px 20px;
   }
-  header .navBar h2, p{
+  header .navBar h2,
+  header .navBar p {
     text-align: left;
   }
 }
@@ -159,19 +164,28 @@ footer p:hover{
   header .navBar {
     padding: 30px 20px 30px 20px;
   }
-    .navBar h2{
-        font-size: 1.2rem;
-    }
-    .navBar p{
-        font-size: 15px;
-    }
+  .navBar h2 {
+    font-size: 1.2rem;
+  }
+  .navBar p {
+    font-size: 15px;
+  }
 }
 
-@media (min-width:1920px) {
-    .Animations{
-        column-count: 2;
-    }
-    .descricao h2, p {
-        font-size: 40px;
-    }
+@media (min-width: 1920px) {
+  .descricao h2,
+  .descricao p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

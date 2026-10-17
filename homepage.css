@@ -7,12 +7,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left;
+  align-items: flex-start;
 }
 
 .menu .text {
   width: 45%;
-  display: table-column;
   text-align: left;
 }
 
@@ -22,16 +21,9 @@ button {
   font-style: italic;
 }
 
-button:hover {
-  p {
-    text-decoration: underline;
-    text-decoration-thickness: 1.5px;
-  }
-}
-
 .menu a {
-  text-align: center;
-  font-size: 60px;
+  text-align: left;
+  font-size: 1.25rem;
   color: rgba(42, 22, 14, 1);
 }
 

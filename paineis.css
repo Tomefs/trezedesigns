@@ -1,31 +1,30 @@
-.paineis{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.paineis {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
-.paineis .base img{
-    width: 100%;
+.paineis .base img {
+  width: 100%;
 }
 
-.paineis .edit{
-    display: flex;
-    position: relative;
+.paineis .edit {
+  position: relative;
+  flex: 1 1 0;
 }
 
-.paineis .hover{
-    position: absolute;
-    opacity: 0;
-    transition: 2s;
-    transition-delay: 0.2s;
+.paineis .hover {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
-.paineis .hover img{
-    width: 100%;
+.paineis .hover img {
+  width: 100%;
 }
 
-.hover:hover{
-    transition: 0.8s;
-    opacity: 1;
+.paineis .edit:hover .hover,
+.paineis .edit:focus-within .hover {
+  opacity: 1;
 }
