@@ -103,7 +103,42 @@ header .navBar .icon {
 }
 
 .navBar img {
-  width: 30px;
+  width: 40px;
+}
+
+.navBar object {
+  width: 40px;
+  height: 40px;
+}
+
+header .navBar > a {
+  position: relative;
+  display: inline-block;
+}
+
+header .navBar > a > object {
+  display: block;
+  pointer-events: none;
+}
+
+@keyframes logo-bounce {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  45% {
+    transform: translateY(-3px) scale(1.12);
+  }
+
+  75% {
+    transform: translateY(0) scale(1.06);
+  }
+}
+
+header .navBar > a:hover object,
+header .navBar > a:focus-visible object {
+  animation: logo-bounce 0.35s ease-out;
 }
 
 .navBar h2,
