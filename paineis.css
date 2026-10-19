@@ -25,6 +25,6 @@
 }
 
 .paineis .edit:hover .hover,
-.paineis .edit:focus-within .hover {
+.paineis .edit:focus .hover {
   opacity: 1;
 }
