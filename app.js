@@ -217,7 +217,7 @@ const startReveals = () => {
         );
       })
       .forEach((item, index) => {
-        const delay = reducedMotion ? 0 : index * 270;
+        const delay = reducedMotion ? 0 : index * 180;
 
         item.style.setProperty("--reveal-delay", `${delay}ms`);
         item.classList.add("active");
