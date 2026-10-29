@@ -2,12 +2,48 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Portfolio | Tomé Simões</title>
+    <title>Tomé Simões | Graphic Designer &amp; Visual Identity Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Portfolio of graphic design, visual identity, motion and multimedia projects by Tomé Simões."
+      content="Graphic design, brand identity, motion design and multimedia projects by Tomé Simões, a designer based in Portugal."
     />
+    <link rel="canonical" href="https://tomefs.github.io/trezedesigns/" />
+    <link rel="alternate" hreflang="en" href="https://tomefs.github.io/trezedesigns/" />
+    <link rel="alternate" hreflang="pt-PT" href="https://tomefs.github.io/trezedesigns/pt/" />
+    <link rel="alternate" hreflang="x-default" href="https://tomefs.github.io/trezedesigns/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:title" content="Tomé Simões | Graphic Designer &amp; Visual Identity Portfolio" />
+    <meta property="og:description" content="Graphic design, brand identity, motion design and multimedia projects by Tomé Simões, a designer based in Portugal." />
+    <meta property="og:url" content="https://tomefs.github.io/trezedesigns/" />
+    <meta property="og:image" content="https://tomefs.github.io/trezedesigns/Freelance/SCFZ/capa.jpg" />
+    <meta property="og:image:alt" content="Futsal campaign and graphic design by Tomé Simões" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Tomé Simões",
+        "jobTitle": "Graphic and Multimedia Designer",
+        "url": "https://tomefs.github.io/trezedesigns/",
+        "homeLocation": {
+          "@type": "Country",
+          "name": "Portugal"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/tom%C3%A9-sim%C3%B5es-532624321/",
+          "https://www.instagram.com/treze_designs/"
+        ],
+        "knowsAbout": [
+          "Graphic design",
+          "Brand identity",
+          "Motion design",
+          "Web design",
+          "Multimedia"
+        ]
+      }
+    </script>
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="work.css" />
     <link rel="stylesheet" href="contact.css" />
@@ -24,19 +60,38 @@
               <img src="icons/logo-balck.png" alt="Tomé Simões home" loading="eager" decoding="async" />
             </object>
           </a>
-          <nav class="icon" aria-label="Main navigation">
+          <button class="mobile-menu-toggle" type="button" aria-label="Open menu" aria-controls="site-navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+          <nav class="icon" id="site-navigation" aria-label="Main navigation">
             <a href="index.html" aria-current="page"><p>Projects</p></a>
             <a href="motion.html"><p>Motion</p></a>
             <a href="about.html"><p>About</p></a>
+          </nav>
+          <div class="nav-utilities">
+            <a class="language-switch" href="pt/" lang="pt-PT" hreflang="pt-PT"><p>PT</p></a>
             <button class="contact-trigger" type="button" aria-haspopup="dialog" aria-controls="contact-dialog">
               Contact
             </button>
-          </nav>
+          </div>
         </div>
       </header>
       <main>
         <section class="portfolio" data-project-list aria-label="Projects">
-          <noscript>Enable JavaScript to view the project portfolio.</noscript>
+          <h2 class="visually-hidden">Selected design projects</h2>
+          <noscript>
+            <p>Enable JavaScript to browse the visual portfolio, or explore the project pages below:</p>
+            <ul class="portfolio-fallback">
+              <li><a href="project.html?id=scfz">SC Ferreira do Zêzere: social media design, promotional graphics and motion design</a></li>
+              <li><a href="project.html?id=kaijas-flowers">Kaija's Flowers: generative audiovisual animation</a></li>
+              <li><a href="project.html?id=ajt">AJT SC Povoense: football social media and matchday graphics</a></li>
+              <li><a href="project.html?id=laini-abernathy">Laini Abernathy: exhibition identity and graphic design</a></li>
+              <li><a href="project.html?id=hateful-eight">The Hateful Eight: interactive webcomic and trailer</a></li>
+              <li><a href="project.html?id=april-25">April 25: interactive multimedia installation</a></li>
+              <li><a href="project.html?id=lamb-to-the-slaughter">Lamb to the Slaughter: board game and visual identity</a></li>
+              <li><a href="project.html?id=signature-collection">Signature Collection: luxury brand rebranding</a></li>
+            </ul>
+          </noscript>
         </section>
       </main>
       <footer>

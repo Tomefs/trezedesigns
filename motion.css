@@ -82,16 +82,18 @@
 
 .motion-card__text h2 {
   margin-bottom: 0.25rem;
-  font-size: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.2;
 }
 
 .motion-card__text p {
   margin-bottom: 0.5rem;
+  line-height: 1.4;
 }
 
 .motion-card__text a {
   color: #fff;
-  font-size: 0.875rem;
+  font-size: var(--type-body);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -104,6 +106,20 @@
 .motion-card:hover video,
 .motion-card:focus-within video {
   opacity: 0.65;
+}
+
+@media (hover: none) {
+  .motion-card__text {
+    align-items: flex-start;
+    justify-content: flex-end;
+    text-align: left;
+    background: linear-gradient(transparent, rgb(0 0 0 / 75%));
+    opacity: 1;
+  }
+
+  .motion-card video {
+    opacity: 0.8;
+  }
 }
 
 @media (max-width: 900px) {

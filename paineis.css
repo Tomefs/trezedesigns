@@ -28,3 +28,16 @@
 .paineis .edit:focus .hover {
   opacity: 1;
 }
+
+@media (max-width: 800px) {
+  .paineis {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0 16px;
+  }
+
+  .paineis .edit {
+    flex: 1 1 calc(50% - 0.5rem);
+    min-width: 0;
+  }
+}

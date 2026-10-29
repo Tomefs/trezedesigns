@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8" />
+    <base href="../" />
+    <title>Projeto de design | Tomé Simões</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Conhece um projeto de design gráfico e multimédia de Tomé Simões." />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="pt_PT" />
+    <meta property="og:title" content="Projeto de design | Tomé Simões" />
+    <meta property="og:description" content="Conhece um projeto de design gráfico e multimédia de Tomé Simões." />
+    <meta property="og:image" content="https://tomefs.github.io/trezedesigns/Freelance/SCFZ/capa.jpg" />
+    <meta property="og:image:alt" content="Projeto de design gráfico de Tomé Simões" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="project.css" />
+    <link rel="stylesheet" href="paineis.css" />
+    <link rel="stylesheet" href="contact.css" />
+    <script defer src="contact.js"></script>
+    <script defer src="projects.js"></script>
+    <script defer src="projects-pt.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <div class="home">
+      <header>
+        <div class="navBar">
+          <a href="pt/" aria-label="Página inicial de Tomé Simões">
+            <object data="icons/logo_13.svg" type="image/svg+xml" aria-label="Tomé Simões">
+              <img src="icons/logo-balck.png" alt="Tomé Simões" loading="eager" decoding="async" />
+            </object>
+          </a>
+          <button class="mobile-menu-toggle" type="button" aria-label="Abrir menu" aria-controls="site-navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+          <nav class="icon" id="site-navigation" aria-label="Navegação principal">
+            <a href="pt/"><p>Projetos</p></a>
+            <a href="pt/motion.html"><p>Motion</p></a>
+            <a href="pt/about.html"><p>Sobre</p></a>
+          </nav>
+          <div class="nav-utilities">
+            <a class="language-switch" href="project.html" lang="en" hreflang="en"><p>EN</p></a>
+            <button class="contact-trigger" type="button" aria-haspopup="dialog" aria-controls="contact-dialog">Contacto</button>
+          </div>
+        </div>
+      </header>
+      <main data-project-detail>
+        <section class="descricao" data-project-description>
+          <noscript>Ativa o JavaScript para consultar este projeto. <a href="pt/">Voltar a todos os projetos.</a></noscript>
+        </section>
+        <section class="Animations" data-project-media></section>
+      </main>
+      <footer>
+        <div class="bar">
+          <p>© Tomé Simões 2025</p>
+          <div class="icon">
+            <a href="https://www.linkedin.com/in/tom%C3%A9-sim%C3%B5es-532624321/"><p>LinkedIn</p></a>
+            <a href="https://www.instagram.com/treze_designs/"><p>Instagram</p></a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <dialog class="contact-dialog" id="contact-dialog" aria-labelledby="contact-title">
+      <div class="contact-dialog__content">
+        <button class="contact-dialog__close" type="button" aria-label="Fechar formulário de contacto">&times;</button>
+        <h2 id="contact-title">Vamos trabalhar juntos</h2>
+        <p>Tens um projeto em mente? Envia-me uma mensagem e responderei assim que possível.</p>
+        <form class="contact-form" action="https://formspree.io/f/xoeelygp" method="POST">
+          <input type="hidden" name="_subject" value="Novo pedido de contacto através de trezedesigns.com" />
+          <input class="contact-form__honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" hidden />
+          <div class="contact-form__field"><label for="contact-name">Nome</label><input id="contact-name" name="name" type="text" autocomplete="name" required /></div>
+          <div class="contact-form__field"><label for="contact-email">Email</label><input id="contact-email" name="email" type="email" autocomplete="email" required /></div>
+          <div class="contact-form__field"><label for="contact-message">Fala-me sobre o teu projeto</label><textarea id="contact-message" name="message" rows="5" required></textarea></div>
+          <button class="contact-form__submit" type="submit">Enviar mensagem</button>
+        </form>
+      </div>
+    </dialog>
+  </body>
+</html>

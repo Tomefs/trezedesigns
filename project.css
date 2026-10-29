@@ -13,29 +13,45 @@ main {
   display: flex;
   align-items: flex-start;
   gap: 4%;
+  animation: none;
 }
 
 .descricao {
   position: sticky;
-  top: 90px;
+  top: 80px;
   align-self: flex-start;
   width: 28%;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
 }
 
 .descricao p {
   margin-top: 1rem;
-  font-size: 0.8125rem;
-  line-height: 1.5;
 }
 
-.descricao a h2 {
-  font-style: italic;
+.descricao .project-subtitle {
+  margin-top: 0.5rem;
+  font-size: clamp(1.125rem, calc(0.9rem + 1.1vw), var(--type-subtitle));
+  line-height: 1.3;
+  font-weight: bold;
+}
+
+.descricao .project-appendix {
+  margin-top: 1.25rem;
+  line-height: 1.4;
+}
+
+.project-appendix a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .Animations {
   position: relative;
   width: 68%;
   margin-left: auto;
+  min-height: 100vh;
 }
 
 .Animations .IMAGEM {
@@ -99,7 +115,8 @@ main {
 
 .Animations figcaption {
   margin-top: 0.35rem;
-  font-size: 0.8125rem;
+  font-size: var(--type-body);
+  line-height: 1.4;
 }
 
 .Animations video {
@@ -129,7 +146,8 @@ main {
 @media (max-width: 800px) {
   main {
     flex-direction: column;
-    padding: 130px 20px 20px;
+    gap: 1.5rem;
+    padding: 130px 16px 30px;
   }
 
   .vid video {
@@ -139,28 +157,19 @@ main {
   .descricao {
     position: static;
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
+    max-height: none;
+    overflow: visible;
   }
 
   .Animations {
     width: 100%;
-  }
-
-  .Animations .box {
-    columns: 1;
-  }
-
-  .paineis {
-    display: none;
-  }
-
-  .descricao p {
-    font-size: 1rem;
+    min-height: 0;
   }
 }
 
-@media (min-width: 1920px) {
-  .descricao h2 {
-    font-size: 1.75rem;
+@media (max-width: 480px) {
+  .Animations .box {
+    columns: 1;
   }
 }

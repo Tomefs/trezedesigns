@@ -5,6 +5,14 @@
     <title>Project | Tomé Simões</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Design and multimedia projects by Tomé Simões." />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:title" content="Design Project | Tomé Simões" />
+    <meta property="og:description" content="Explore a graphic design and multimedia project by Tomé Simões." />
+    <meta property="og:image" content="https://tomefs.github.io/trezedesigns/Freelance/SCFZ/capa.jpg" />
+    <meta property="og:image:alt" content="Graphic design project by Tomé Simões" />
+    <meta property="og:url" content="https://tomefs.github.io/trezedesigns/project.html" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="project.css" />
     <link rel="stylesheet" href="paineis.css" />
@@ -22,14 +30,20 @@
               <img src="icons/logo-balck.png" alt="Tomé Simões home" loading="eager" decoding="async" />
             </object>
           </a>
-          <nav class="icon" aria-label="Main navigation">
+          <button class="mobile-menu-toggle" type="button" aria-label="Open menu" aria-controls="site-navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+          <nav class="icon" id="site-navigation" aria-label="Main navigation">
             <a href="index.html"><p>Projects</p></a>
             <a href="motion.html"><p>Motion</p></a>
             <a href="about.html"><p>About</p></a>
+          </nav>
+          <div class="nav-utilities">
+            <a class="language-switch" href="pt/project.html" lang="pt-PT" hreflang="pt-PT"><p>PT</p></a>
             <button class="contact-trigger" type="button" aria-haspopup="dialog" aria-controls="contact-dialog">
               Contact
             </button>
-          </nav>
+          </div>
         </div>
       </header>
       <main data-project-detail>

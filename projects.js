@@ -48,9 +48,9 @@ window.portfolioProjects = [
   },
   {
     id: "ajt",
-    title: "AJT SC Povoense Matchdays and Social Media Posts",
+    title: "AJT SC Povoense",
     cardTitle: "AJT SC Povoense",
-    subtitle: "social media designs",
+    subtitle: "Matchday graphics and social media design",
     description:
       "Matchday graphics, social media posts and promotional videos for AJT SC Povoense.",
     cover: "Freelance/AJT/mockup.jpg",
@@ -70,9 +70,9 @@ window.portfolioProjects = [
   },
   {
     id: "laini-abernathy",
-    title: "Laini Abernathy the Exhibition",
-    cardTitle: "Laini Abernathy the Exhibition",
-    subtitle: "Design and curation of a fictional exhibition",
+    title: "Laini Abernathy",
+    cardTitle: "Laini Abernathy",
+    subtitle: "Exhibition identity and design",
     description:
       "The visual identity and exhibition design for a fictional exhibition about designer Laini Abernathy.",
     cover: "UC/ODM/mockups/Free_Tote_Bag_Mockup_3.jpg",
@@ -129,9 +129,9 @@ window.portfolioProjects = [
   },
   {
     id: "hateful-eight",
-    title: "The Hateful Eight a Webcomic",
+    title: "The Hateful Eight",
     cardTitle: "The Hateful Eight",
-    subtitle: "the Webcomic",
+    subtitle: "Interactive webcomic",
     description:
       "An interactive webcomic and trailer inspired by Quentin Tarantino's film The Hateful Eight.",
     cover: "UC/Comunicacao_Multimedia/capa.jpg",
@@ -154,9 +154,9 @@ window.portfolioProjects = [
   },
   {
     id: "april-25",
-    title: "April 25th Project for an Installation",
+    title: "April 25",
     cardTitle: "25th of April",
-    subtitle: "pannel installation",
+    subtitle: "Interactive multimedia installation",
     description:
       "An interactive installation exploring the 50th anniversary of Portugal's April 25 Revolution.",
     cover: "UC/Trabalho25Abril/Painel1.jpg",
@@ -184,9 +184,9 @@ window.portfolioProjects = [
   },
   {
     id: "lamb-to-the-slaughter",
-    title: "Lamb to the Slaughter the board game",
+    title: "Lamb to the Slaughter",
     cardTitle: "Lamb to the Slaughter",
-    subtitle: "the board game",
+    subtitle: "Board game and visual identity",
     description:
       "A board game and visual identity inspired by Roald Dahl's short story Lamb to the Slaughter.",
     cover: "UC/Aplicacoes multimedia/jogo1.jpg",
@@ -212,9 +212,9 @@ window.portfolioProjects = [
   },
   {
     id: "signature-collection",
-    title: "Signature Collection rebrand",
+    title: "Signature Collection",
     cardTitle: "Signature Collection Rebrand",
-    subtitle: "Rebranding project for a luxury brand",
+    subtitle: "Luxury brand rebranding",
     description:
       "A rebrand for Signature Collection, developed during an internship at Camera and Suitcase.",
     cover: "Freelance/SigantureCollection/Artboard 1 copy 8.jpg",

@@ -6,7 +6,7 @@
   padding: 0.55rem 1rem;
   background: transparent;
   color: rgba(42, 22, 14, 1);
-  font-size: 1rem;
+  font-size: var(--type-body);
   font-style: normal;
   cursor: pointer;
   isolation: isolate;
@@ -34,6 +34,57 @@
 }
 
 .contact-trigger:focus-visible {
+  outline: 2px solid rgba(42, 22, 14, 1);
+  outline-offset: 3px;
+}
+
+.nav-utilities a.language-switch {
+  position: relative;
+  z-index: 0;
+  display: grid;
+  width: 2.4rem;
+  height: 2.4rem;
+  flex: 0 0 2.4rem;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(42, 22, 14, 1);
+  border-radius: 50%;
+  color: rgba(42, 22, 14, 1);
+  isolation: isolate;
+}
+
+.nav-utilities a.language-switch::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  background: rgba(42, 22, 14, 1);
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.nav-utilities a.language-switch p {
+  padding: 0;
+  background: none;
+  color: inherit;
+  font-size: 0.75rem;
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+
+.nav-utilities a.language-switch:hover::before,
+.nav-utilities a.language-switch:focus-visible::before {
+  transform: scaleX(1);
+}
+
+.nav-utilities a.language-switch:hover,
+.nav-utilities a.language-switch:focus-visible {
+  color: whitesmoke;
+}
+
+.nav-utilities a.language-switch:focus-visible {
   outline: 2px solid rgba(42, 22, 14, 1);
   outline-offset: 3px;
 }
@@ -86,7 +137,7 @@
 }
 
 .contact-form__field label {
-  font-size: 0.9rem;
+  font-size: var(--type-body);
 }
 
 .contact-form__field input,
@@ -149,13 +200,20 @@
 
 @media (max-width: 800px) {
   .contact-trigger {
-    font-size: 15px;
+    font-size: var(--type-body);
+  }
+
+  .nav-utilities a.language-switch {
+    width: 2.25rem;
+    height: 2.25rem;
+    flex-basis: 2.25rem;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .contact-trigger::before,
-  .contact-form__submit::before {
+  .contact-form__submit::before,
+  .navBar .icon a.language-switch::before {
     transition: none;
   }
 }
