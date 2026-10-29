@@ -10,7 +10,9 @@
     <title>Motion Design | Tomé Simões</title>
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="motion.css" />
+    <link rel="stylesheet" href="contact.css" />
     <script defer src="app.js"></script>
+    <script defer src="contact.js"></script>
   </head>
   <body>
     <div class="home">
@@ -40,6 +42,9 @@
             <a href="about.html">
               <p>About</p>
             </a>
+            <button class="contact-trigger" type="button" aria-haspopup="dialog" aria-controls="contact-dialog">
+              Contact
+            </button>
           </nav>
         </div>
       </header>
@@ -183,5 +188,29 @@
         </div>
       </footer>
     </div>
+    <dialog class="contact-dialog" id="contact-dialog" aria-labelledby="contact-title">
+      <div class="contact-dialog__content">
+        <button class="contact-dialog__close" type="button" aria-label="Close contact form">&times;</button>
+        <h2 id="contact-title">Let’s work together</h2>
+        <p>Have a project in mind? Send me a message and I’ll get back to you.</p>
+        <form class="contact-form" action="https://formspree.io/f/xoeelygp" method="POST">
+          <input type="hidden" name="_subject" value="New project enquiry from trezedesigns.com" />
+          <input class="contact-form__honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" hidden />
+          <div class="contact-form__field">
+            <label for="contact-name">Name</label>
+            <input id="contact-name" name="name" type="text" autocomplete="name" required />
+          </div>
+          <div class="contact-form__field">
+            <label for="contact-email">Email</label>
+            <input id="contact-email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="contact-form__field">
+            <label for="contact-message">Tell me about your project</label>
+            <textarea id="contact-message" name="message" rows="5" required></textarea>
+          </div>
+          <button class="contact-form__submit" type="submit">Send message</button>
+        </form>
+      </div>
+    </dialog>
   </body>
 </html>

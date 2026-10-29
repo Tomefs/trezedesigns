@@ -227,7 +227,7 @@ window.portfolioProjects = [
     media: [
       {
         type: "group",
-        className: "IMAGEM",
+        className: "IMAGEM signature-logos",
         items: [
           {
             type: "group",

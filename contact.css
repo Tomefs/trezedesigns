@@ -1,0 +1,161 @@
+.contact-trigger {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  border: 1px solid rgba(42, 22, 14, 1);
+  padding: 0.55rem 1rem;
+  background: transparent;
+  color: rgba(42, 22, 14, 1);
+  font-size: 1rem;
+  font-style: normal;
+  cursor: pointer;
+  isolation: isolate;
+}
+
+.contact-trigger::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: rgba(42, 22, 14, 1);
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.contact-trigger:hover::before,
+.contact-trigger:focus-visible::before {
+  transform: scaleX(1);
+}
+
+.contact-trigger:hover,
+.contact-trigger:focus-visible {
+  color: whitesmoke;
+}
+
+.contact-trigger:focus-visible {
+  outline: 2px solid rgba(42, 22, 14, 1);
+  outline-offset: 3px;
+}
+
+.contact-dialog {
+  width: min(92vw, 560px);
+  max-width: none;
+  max-height: 85vh;
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+  border: 1px solid rgba(42, 22, 14, 0.25);
+  background: whitesmoke;
+  color: rgba(42, 22, 14, 1);
+}
+
+.contact-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.contact-dialog__content {
+  position: relative;
+  padding: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+.contact-dialog__content > p {
+  margin: 0.75rem 0 1.5rem;
+}
+
+.contact-dialog__close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.9rem;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.contact-form__field {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.contact-form__field label {
+  font-size: 0.9rem;
+}
+
+.contact-form__field input,
+.contact-form__field textarea {
+  width: 100%;
+  border: 1px solid rgba(42, 22, 14, 0.35);
+  border-radius: 0;
+  padding: 0.75rem;
+  background: transparent;
+  color: rgba(42, 22, 14, 1);
+  font: inherit;
+}
+
+.contact-form__field textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.contact-form__field input:focus-visible,
+.contact-form__field textarea:focus-visible {
+  outline: 2px solid rgba(42, 22, 14, 1);
+  outline-offset: 2px;
+}
+
+.contact-form__submit {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  justify-self: start;
+  border: 1px solid rgba(42, 22, 14, 1);
+  padding: 0.75rem 1.25rem;
+  background: transparent;
+  color: rgba(42, 22, 14, 1);
+  font: inherit;
+  font-style: normal;
+  cursor: pointer;
+  isolation: isolate;
+}
+
+.contact-form__submit::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: rgba(42, 22, 14, 1);
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.contact-form__submit:hover::before,
+.contact-form__submit:focus-visible::before {
+  transform: scaleX(1);
+}
+
+.contact-form__submit:hover,
+.contact-form__submit:focus-visible {
+  color: whitesmoke;
+}
+
+@media (max-width: 800px) {
+  .contact-trigger {
+    font-size: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-trigger::before,
+  .contact-form__submit::before {
+    transition: none;
+  }
+}

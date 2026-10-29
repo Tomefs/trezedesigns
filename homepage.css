@@ -21,65 +21,6 @@ button {
   font-style: italic;
 }
 
-.contact {
-  width: min(100%, 560px);
-  margin-top: 1rem;
-}
-
-.contact > p {
-  margin: 0.75rem 0 1.5rem;
-}
-
-.contact form {
-  display: grid;
-  gap: 1.25rem;
-}
-
-.contact__field {
-  display: grid;
-  gap: 0.4rem;
-}
-
-.contact__field label {
-  font-size: 0.9rem;
-}
-
-.contact__field input,
-.contact__field textarea {
-  width: 100%;
-  border: 1px solid rgba(42, 22, 14, 0.35);
-  border-radius: 0;
-  padding: 0.75rem;
-  background: transparent;
-  color: rgba(42, 22, 14, 1);
-  font: inherit;
-}
-
-.contact__field textarea {
-  min-height: 8rem;
-  resize: vertical;
-}
-
-.contact__field input:focus-visible,
-.contact__field textarea:focus-visible {
-  outline: 2px solid rgba(42, 22, 14, 1);
-  outline-offset: 2px;
-}
-
-.contact__submit {
-  justify-self: start;
-  border: 1px solid rgba(42, 22, 14, 1);
-  padding: 0.75rem 1.25rem;
-  background: rgba(42, 22, 14, 1);
-  color: whitesmoke;
-  font: inherit;
-}
-
-.contact__submit:hover {
-  background: transparent;
-  color: rgba(42, 22, 14, 1);
-}
-
 .menu a {
   text-align: left;
   font-size: 1.25rem;

@@ -63,6 +63,23 @@ main {
   padding: 0 0 3rem;
 }
 
+.Animations .signature-logos > div > img {
+  width: 55%;
+}
+
+.Animations .signature-logos > div {
+  width: 100%;
+}
+
+.Animations .signature-logos img {
+  display: block;
+  margin-inline: auto;
+}
+
+.Animations .signature-logos .simbolo img {
+  width: 35%;
+}
+
 .Animations .box {
   columns: 2;
   column-gap: 10px;
