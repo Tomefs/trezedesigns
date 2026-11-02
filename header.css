@@ -8,11 +8,46 @@
   src: url(fonts/Satoshi-Black.otf);
 }
 
+@font-face {
+  font-family: ltsuperiorBold;
+  src: url(fonts/Satoshi-BlackItalic.otf);
+  font-style: italic;
+}
+
 :root {
-  --page-background: whitesmoke;
+  --page-background: #000;
+  --page-foreground: #f3eee8;
+  --control-border: #b6aaa0;
+  --logo-background: whitesmoke;
+  --scrollbar-thumb: rgba(243, 238, 232, 0.3);
+  --scrollbar-thumb-hover: rgba(243, 238, 232, 0.55);
+  color-scheme: dark;
   --type-body: 0.875rem;
-  --type-subtitle: 1.618rem;
+  --type-subtitle: 1.35rem;
   --type-title: 2.618rem;
+}
+
+html {
+  scrollbar-color: var(--scrollbar-thumb) transparent;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: var(--scrollbar-thumb);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
 }
 
 * {
@@ -52,6 +87,7 @@ main {
 
 body {
   background-color: var(--page-background);
+  color: var(--page-foreground);
   font-size: var(--type-body);
   line-height: 1.618;
 }
@@ -83,7 +119,7 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(1.25rem, calc(1rem + 1.2vw), var(--type-subtitle));
+  font-size: clamp(1.125rem, calc(0.9rem + 1vw), var(--type-subtitle));
   line-height: 1.2;
 }
 
@@ -97,6 +133,26 @@ p {
   font-family: ltsuperior;
   font-size: var(--type-body);
   line-height: 1.618;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0;
+  list-style: none;
+}
+
+.project-tags li {
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+  color: inherit;
+  font-size: 0.7rem;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  opacity: 0.78;
 }
 
 .navBar a,
@@ -196,7 +252,7 @@ header .navBar > a:focus-visible object {
 .bar p,
 .bar h2 {
   font-size: var(--type-body);
-  color: black;
+  color: var(--page-foreground);
 }
 
 .navBar h2 {
@@ -211,11 +267,6 @@ header .navBar > a:focus-visible object {
   background-size: 0 1px;
   transition: background-size 0.3s ease;
   padding-bottom: 2px;
-}
-
-.nav-utilities .language-switch p {
-  font-size: 0.8rem;
-  letter-spacing: 0.04em;
 }
 
 .navBar .icon a:hover p,
@@ -296,9 +347,9 @@ footer p:hover {
     justify-content: center;
     justify-self: start;
     gap: 5px;
-    border: 1px solid rgba(42, 22, 14, 1);
+    border: 1px solid var(--control-border);
     background: transparent;
-    color: rgba(42, 22, 14, 1);
+    color: var(--page-foreground);
     cursor: pointer;
   }
 
@@ -352,12 +403,6 @@ footer p:hover {
     white-space: nowrap;
   }
 
-  .nav-utilities .language-switch {
-    width: 2.25rem;
-    height: 2.25rem;
-    flex-basis: 2.25rem;
-  }
-
   html:not(.js) header .navBar .icon {
     display: flex;
     flex-direction: column;
@@ -369,14 +414,14 @@ footer p:hover {
     display: none;
   }
 
-  header .navBar .icon > a:not(.language-switch) {
+  header .navBar .icon > a {
     display: flex;
     min-height: 44px;
     align-items: center;
     justify-content: center;
   }
 
-  header .navBar .icon > a:not(.language-switch) p {
+  header .navBar .icon > a p {
     font-size: var(--type-body);
   }
 
@@ -396,6 +441,10 @@ footer p:hover {
   header .navBar p {
     text-align: left;
   }
+}
+
+.navBar object {
+  filter: invert(1);
 }
 
 @media (prefers-reduced-motion: reduce) {

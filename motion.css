@@ -82,13 +82,13 @@
 
 .motion-card__text h2 {
   margin-bottom: 0.25rem;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.2;
 }
 
-.motion-card__text p {
+.motion-card__text .project-tags {
+  justify-content: center;
   margin-bottom: 0.5rem;
-  line-height: 1.4;
 }
 
 .motion-card__text a {
@@ -115,6 +115,10 @@
     text-align: left;
     background: linear-gradient(transparent, rgb(0 0 0 / 75%));
     opacity: 1;
+  }
+
+  .motion-card__text .project-tags {
+    justify-content: flex-start;
   }
 
   .motion-card video {

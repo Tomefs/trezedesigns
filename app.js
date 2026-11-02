@@ -1,15 +1,62 @@
 document.documentElement.classList.add("js");
 
 const projects = window.portfolioProjects || [];
-const isPortuguese = document.documentElement.lang === "pt-PT";
 const projectList = document.querySelector(".portfolio[data-project-list]");
 const projectDetail = document.querySelector("[data-project-detail]");
 
-const createMediaElement = (media, localizedAlt) => {
+const createProjectTags = (tags) => {
+  const list = document.createElement("ul");
+  list.className = "project-tags";
+  list.setAttribute("aria-label", "Project themes");
+  tags.forEach((tag) => {
+    const item = document.createElement("li");
+    item.textContent = tag;
+    list.append(item);
+  });
+  return list;
+};
+
+const getGridProjects = () => [
+  ...projects.filter((project) => project.id === "signature-collection"),
+  ...projects.filter((project) => project.id !== "signature-collection"),
+];
+
+const createProjectNavigation = (project) => {
+  const gridProjects = getGridProjects();
+  const projectIndex = gridProjects.findIndex((item) => item.id === project.id);
+  const navigation = document.createElement("nav");
+  navigation.className = "project-navigation";
+  navigation.setAttribute("aria-label", "Project navigation");
+
+  const createLink = (neighbor, direction) => {
+    if (!neighbor) {
+      return;
+    }
+
+    const link = document.createElement("a");
+    link.className = `project-navigation__link project-navigation__link--${direction}`;
+    link.href = `project.html?id=${encodeURIComponent(neighbor.id)}`;
+
+    const label = document.createElement("span");
+    label.textContent =
+      direction === "previous" ? "Previous project" : "Next project";
+
+    const title = document.createElement("span");
+    title.textContent = neighbor.title;
+    link.append(label, title);
+    navigation.append(link);
+  };
+
+  createLink(gridProjects[projectIndex - 1], "previous");
+  createLink(gridProjects[projectIndex + 1], "next");
+  return navigation;
+};
+
+const createMediaElement = (media) => {
   if (media.type === "group") {
     const group = document.createElement("div");
     group.className = media.className || "";
-    media.items.forEach((item) => group.append(createMediaElement(item, localizedAlt)));
+    media.items.forEach((item) => group.append(createMediaElement(item)));
     return group;
   }
 
@@ -36,7 +83,7 @@ const createMediaElement = (media, localizedAlt) => {
   } else {
     element = document.createElement("img");
     element.src = media.src;
-    element.alt = localizedAlt || media.alt || "";
+    element.alt = media.alt || "";
     element.loading = "lazy";
     element.decoding = "async";
   }
@@ -55,17 +102,14 @@ const renderProjectList = () => {
     return;
   }
 
-  projects.forEach((project, index) => {
-    const localized = isPortuguese
-      ? window.portfolioPortuguese?.[project.id]
-      : undefined;
+  getGridProjects().forEach((project, index) => {
     const card = document.createElement("section");
     card.className = "box reveal";
 
     const box = document.createElement("div");
     box.className = "box";
     const link = document.createElement("a");
-    link.href = `${isPortuguese ? "pt/" : ""}project.html?id=${encodeURIComponent(project.id)}`;
+    link.href = `project.html?id=${encodeURIComponent(project.id)}`;
 
     if (project.cardVideo) {
       const video = document.createElement("video");
@@ -82,7 +126,7 @@ const renderProjectList = () => {
 
     const image = document.createElement("img");
     image.src = project.cover;
-    image.alt = localized?.coverAlt || project.coverAlt;
+    image.alt = project.coverAlt;
     image.loading = index === 0 ? "eager" : "lazy";
     image.decoding = "async";
     link.append(image);
@@ -90,10 +134,8 @@ const renderProjectList = () => {
     const text = document.createElement("div");
     text.className = "text";
     const title = document.createElement("h3");
-    title.textContent = localized?.cardTitle || project.cardTitle;
-    const subtitle = document.createElement("p");
-    subtitle.textContent = localized?.subtitle || project.subtitle;
-    text.append(title, subtitle);
+    title.textContent = project.cardTitle;
+    text.append(title, createProjectTags(project.tags));
     link.append(text);
     box.append(link);
     card.append(box);
@@ -101,17 +143,14 @@ const renderProjectList = () => {
   });
 };
 
-const renderPanels = (project, localized) => {
+const renderPanels = (project) => {
   if (!project.panelPairs) {
     return;
   }
 
   const panels = document.createElement("section");
   panels.className = "paineis";
-  panels.setAttribute(
-    "aria-label",
-    isPortuguese ? "Design de painéis interativos" : "Interactive panel designs",
-  );
+  panels.setAttribute("aria-label", "Interactive panel designs");
 
   project.panelPairs.forEach((pair) => {
     const panel = document.createElement("div");
@@ -122,9 +161,7 @@ const renderPanels = (project, localized) => {
     base.className = "base";
     const baseImage = document.createElement("img");
     baseImage.src = pair.base;
-    baseImage.alt = isPortuguese
-      ? `${localized?.panelAlt || pair.alt}, design base`
-      : `${pair.alt} base design`;
+    baseImage.alt = `${pair.alt} base design`;
     baseImage.loading = "lazy";
     baseImage.decoding = "async";
     base.append(baseImage);
@@ -133,9 +170,7 @@ const renderPanels = (project, localized) => {
     overlay.className = "hover";
     const overlayImage = document.createElement("img");
     overlayImage.src = pair.overlay;
-    overlayImage.alt = isPortuguese
-      ? `${localized?.panelAlt || pair.alt}, design interativo`
-      : `${pair.alt} interactive design`;
+    overlayImage.alt = `${pair.alt} interactive design`;
     overlayImage.loading = "lazy";
     overlayImage.decoding = "async";
     overlay.append(overlayImage);
@@ -157,37 +192,32 @@ const renderProjectDetail = () => {
   if (!project) {
     const message = document.createElement("p");
     message.className = "project-error";
-    message.textContent = isPortuguese
-      ? "Projeto não encontrado. Volta à página de projetos."
-      : "Project not found. Return to the projects page.";
+    message.textContent = "Project not found. Return to the projects page.";
     const link = document.createElement("a");
-    link.href = isPortuguese ? "pt/" : "index.html";
-    link.textContent = isPortuguese ? "Ver todos os projetos" : "View all projects";
+    link.href = "index.html";
+    link.textContent = "View all projects";
     projectDetail.replaceChildren(message, link);
     return;
   }
 
-  const localized = isPortuguese
-    ? window.portfolioPortuguese?.[project.id]
-    : undefined;
-  const title = localized?.title || project.title;
-  const subtitle = localized?.subtitle || project.subtitle;
-  const descriptionText = localized?.description || project.description;
-  const paragraphs = localized?.paragraphs || project.paragraphs;
+  const title = project.title;
+  const tags = project.tags;
+  const subtitle = tags.join(", ");
+  const descriptionText = project.description;
+  const paragraphs = project.paragraphs;
   const baseUrl = "https://tomefs.github.io/trezedesigns/";
   const englishUrl = `${baseUrl}project.html?id=${encodeURIComponent(project.id)}`;
-  const portugueseUrl = `${baseUrl}pt/project.html?id=${encodeURIComponent(project.id)}`;
-  const canonicalUrl = isPortuguese ? portugueseUrl : englishUrl;
+  const canonicalUrl = englishUrl;
 
   document.title = `${title} | Tomé Simões`;
-  document.documentElement.lang = isPortuguese ? "pt-PT" : "en";
+  document.documentElement.lang = "en";
   document.querySelector('meta[name="description"]').content = descriptionText;
   document.querySelector('meta[property="og:title"]').content = document.title;
   document.querySelector('meta[property="og:description"]').content = descriptionText;
   document.querySelector('meta[property="og:image"]').content =
     new URL(project.cover, baseUrl).href;
   document.querySelector('meta[property="og:image:alt"]').content =
-    localized?.coverAlt || project.coverAlt;
+    project.coverAlt;
 
   const canonical = document.querySelector('link[rel="canonical"]') ||
     document.head.appendChild(
@@ -217,7 +247,7 @@ const renderProjectDetail = () => {
     description: descriptionText,
     image: new URL(project.cover, baseUrl).href,
     url: canonicalUrl,
-    inLanguage: isPortuguese ? "pt-PT" : "en",
+    inLanguage: "en",
     creator: {
       "@type": "Person",
       name: "Tomé Simões",
@@ -238,23 +268,14 @@ const renderProjectDetail = () => {
     alternate.href = href;
   };
   addAlternateLink("en", englishUrl);
-  addAlternateLink("pt-PT", portugueseUrl);
   addAlternateLink("x-default", englishUrl);
-
-  const languageSwitch = document.querySelector(".language-switch");
-  if (languageSwitch) {
-    languageSwitch.href = isPortuguese ? englishUrl : portugueseUrl;
-  }
 
   const heading = document.createElement("h1");
   heading.textContent = title;
   const description = document.querySelector("[data-project-description]");
   description.append(heading);
 
-  const subtitleElement = document.createElement("p");
-  subtitleElement.className = "project-subtitle";
-  subtitleElement.textContent = subtitle;
-  description.append(subtitleElement);
+  description.append(createProjectTags(tags));
 
   paragraphs.forEach((paragraph) => {
     const element = document.createElement("p");
@@ -268,16 +289,18 @@ const renderProjectDetail = () => {
     const link = document.createElement("a");
     link.href = project.externalLink.href;
     link.textContent =
-      localized?.externalLink?.text || project.externalLink.text;
+      project.externalLink.text;
     appendix.append(link);
     description.append(appendix);
   }
 
+  description.append(createProjectNavigation(project));
+
   const media = document.querySelector("[data-project-media]");
   project.media.forEach((item) =>
-    media.append(createMediaElement(item, localized?.mediaAlt)),
+    media.append(createMediaElement(item)),
   );
-  renderPanels(project, localized);
+  renderPanels(project);
 };
 
 renderProjectList();
@@ -286,6 +309,40 @@ renderProjectDetail();
 const reducedMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)",
 ).matches;
+
+const initializeBannerWord = () => {
+  const wordElement = document.querySelector("[data-rotating-word]");
+  if (!wordElement || reducedMotion) {
+    return;
+  }
+
+  const words = ["strategy", "identity", "design", "motion", "storytelling"];
+  let wordIndex = 0;
+  let characterIndex = words[0].length;
+  let deleting = true;
+
+  const typeNextCharacter = () => {
+    const word = words[wordIndex];
+    characterIndex += deleting ? -1 : 1;
+    wordElement.textContent = word.slice(0, characterIndex);
+
+    let delay = 65;
+    if (!deleting && characterIndex === word.length) {
+      deleting = true;
+      delay = 1400;
+    } else if (deleting && characterIndex === 0) {
+      wordIndex = (wordIndex + 1) % words.length;
+      deleting = false;
+      delay = 300;
+    }
+
+    window.setTimeout(typeNextCharacter, delay);
+  };
+
+  window.setTimeout(typeNextCharacter, 1500);
+};
+
+initializeBannerWord();
 
 const startReveals = () => {
   const revealItems = document.querySelectorAll(

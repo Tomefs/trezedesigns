@@ -1,5 +1,5 @@
 body {
-  background-color: whitesmoke;
+  background-color: var(--page-background);
 }
 
 .menu {
@@ -24,7 +24,7 @@ button {
 .menu a {
   text-align: left;
   font-size: 1.25rem;
-  color: rgba(42, 22, 14, 1);
+  color: var(--page-foreground);
 }
 
 @media (max-width: 800px) {

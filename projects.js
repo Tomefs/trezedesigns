@@ -3,7 +3,7 @@ window.portfolioProjects = [
     id: "scfz",
     title: "SC Ferreira do Zêzere",
     cardTitle: "SCFZ+ACRCF",
-    subtitle: "social media design",
+    tags: ["Sports graphics", "Futsal", "Recruitment campaign"],
     description:
       "Social media, promotional design and motion graphics created for SC Ferreira do Zêzere.",
     cover: "Freelance/SCFZ/capa.jpg",
@@ -28,7 +28,7 @@ window.portfolioProjects = [
     id: "kaijas-flowers",
     title: "Kaija's Flowers",
     cardTitle: "Kaija's Flowers",
-    subtitle: "Animation Collection",
+    tags: ["Generative visual design", "Audiovisual", "Nature-inspired"],
     description:
       "A generative audiovisual composition inspired by composer Kaija Saariaho, created with Processing.",
     cover: "UC/DG/frame-0116.png",
@@ -50,7 +50,7 @@ window.portfolioProjects = [
     id: "ajt",
     title: "AJT SC Povoense",
     cardTitle: "AJT SC Povoense",
-    subtitle: "Matchday graphics and social media design",
+    tags: ["Sports graphics", "Matchday campaign", "Youth football"],
     description:
       "Matchday graphics, social media posts and promotional videos for AJT SC Povoense.",
     cover: "Freelance/AJT/mockup.jpg",
@@ -72,7 +72,7 @@ window.portfolioProjects = [
     id: "laini-abernathy",
     title: "Laini Abernathy",
     cardTitle: "Laini Abernathy",
-    subtitle: "Exhibition identity and design",
+    tags: ["Exhibition identity", "Editorial design", "Jazz heritage"],
     description:
       "The visual identity and exhibition design for a fictional exhibition about designer Laini Abernathy.",
     cover: "UC/ODM/mockups/Free_Tote_Bag_Mockup_3.jpg",
@@ -131,7 +131,7 @@ window.portfolioProjects = [
     id: "hateful-eight",
     title: "The Hateful Eight",
     cardTitle: "The Hateful Eight",
-    subtitle: "Interactive webcomic",
+    tags: ["Editorial illustration", "Interactive storytelling", "Film adaptation"],
     description:
       "An interactive webcomic and trailer inspired by Quentin Tarantino's film The Hateful Eight.",
     cover: "UC/Comunicacao_Multimedia/capa.jpg",
@@ -156,7 +156,7 @@ window.portfolioProjects = [
     id: "april-25",
     title: "April 25",
     cardTitle: "25th of April",
-    subtitle: "Interactive multimedia installation",
+    tags: ["Information design", "Interactive installation", "April 25 Revolution"],
     description:
       "An interactive installation exploring the 50th anniversary of Portugal's April 25 Revolution.",
     cover: "UC/Trabalho25Abril/Painel1.jpg",
@@ -186,7 +186,7 @@ window.portfolioProjects = [
     id: "lamb-to-the-slaughter",
     title: "Lamb to the Slaughter",
     cardTitle: "Lamb to the Slaughter",
-    subtitle: "Board game and visual identity",
+    tags: ["Board game design", "Visual identity", "Narrative adaptation"],
     description:
       "A board game and visual identity inspired by Roald Dahl's short story Lamb to the Slaughter.",
     cover: "UC/Aplicacoes multimedia/jogo1.jpg",
@@ -214,7 +214,7 @@ window.portfolioProjects = [
     id: "signature-collection",
     title: "Signature Collection",
     cardTitle: "Signature Collection Rebrand",
-    subtitle: "Luxury brand rebranding",
+    tags: ["Brand identity", "Luxury positioning", "Visual system"],
     description:
       "A rebrand for Signature Collection, developed during an internship at Camera and Suitcase.",
     cover: "Freelance/SigantureCollection/Artboard 1 copy 8.jpg",

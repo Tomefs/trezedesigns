@@ -1,7 +1,7 @@
 document.documentElement.classList.add("js");
 
 const contactDialog = document.querySelector("#contact-dialog");
-const contactTrigger = document.querySelector(".contact-trigger");
+const contactTriggers = document.querySelectorAll(".contact-trigger");
 const contactCloseButton = document.querySelector(".contact-dialog__close");
 const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
 const siteNavigation = document.querySelector("#site-navigation");
@@ -11,14 +11,10 @@ if (
   siteNavigation instanceof HTMLElement
 ) {
   const navBar = mobileMenuToggle.closest(".navBar");
-  const isPortuguese = document.documentElement.lang === "pt-PT";
 
   const closeMenu = () => {
     mobileMenuToggle.setAttribute("aria-expanded", "false");
-    mobileMenuToggle.setAttribute(
-      "aria-label",
-      isPortuguese ? "Abrir menu" : "Open menu",
-    );
+    mobileMenuToggle.setAttribute("aria-label", "Open menu");
     navBar?.classList.remove("menu-open");
   };
 
@@ -28,13 +24,7 @@ if (
     mobileMenuToggle.setAttribute("aria-expanded", String(!isExpanded));
     mobileMenuToggle.setAttribute(
       "aria-label",
-      isPortuguese
-        ? isExpanded
-          ? "Abrir menu"
-          : "Fechar menu"
-        : isExpanded
-          ? "Open menu"
-          : "Close menu",
+      isExpanded ? "Open menu" : "Close menu",
     );
     navBar?.classList.toggle("menu-open", !isExpanded);
   });
@@ -47,8 +37,6 @@ if (
       closeMenu();
     }
   });
-
-  contactTrigger?.addEventListener("click", closeMenu);
 
   document.addEventListener("keydown", (event) => {
     if (
@@ -67,9 +55,17 @@ if (
   });
 }
 
-if (contactDialog instanceof HTMLDialogElement && contactTrigger && contactCloseButton) {
-  contactTrigger.addEventListener("click", () => {
-    contactDialog.showModal();
+if (contactDialog instanceof HTMLDialogElement && contactCloseButton) {
+  contactTriggers.forEach((contactTrigger) => {
+    contactTrigger.addEventListener("click", () => {
+      contactDialog.showModal();
+    });
+
+    contactTrigger.addEventListener("click", () => {
+      if (mobileMenuToggle?.getAttribute("aria-expanded") === "true") {
+        mobileMenuToggle.click();
+      }
+    });
   });
 
   contactCloseButton.addEventListener("click", () => {

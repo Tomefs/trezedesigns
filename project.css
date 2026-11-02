@@ -17,23 +17,28 @@ main {
 }
 
 .descricao {
-  position: sticky;
-  top: 80px;
   align-self: flex-start;
   width: 28%;
-  max-height: calc(100vh - 100px);
+  height: calc(100vh - 120px);
+  min-height: 0;
   overflow-y: auto;
+  overscroll-behavior-y: contain;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.descricao::-webkit-scrollbar,
+.Animations::-webkit-scrollbar {
+  display: none;
 }
 
 .descricao p {
   margin-top: 1rem;
 }
 
-.descricao .project-subtitle {
-  margin-top: 0.5rem;
-  font-size: clamp(1.125rem, calc(0.9rem + 1.1vw), var(--type-subtitle));
-  line-height: 1.3;
-  font-weight: bold;
+.descricao .project-tags {
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .descricao .project-appendix {
@@ -47,11 +52,57 @@ main {
   text-underline-offset: 2px;
 }
 
+.project-navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.project-navigation__link {
+  display: flex;
+  flex: 1 1 0;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.15rem;
+  border: 1px solid var(--control-border);
+  padding: 0.55rem 0.65rem;
+  color: var(--page-foreground);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.project-navigation__link--next {
+  text-align: right;
+}
+
+.project-navigation__link span:first-child {
+  font-size: 0.65rem;
+  letter-spacing: 0.04em;
+  opacity: 0.7;
+}
+
+.project-navigation__link span:last-child {
+  font-size: 0.8rem;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.project-navigation__link:hover {
+  background-color: var(--page-foreground);
+  color: var(--page-background);
+}
+
 .Animations {
   position: relative;
   width: 68%;
   margin-left: auto;
-  min-height: 100vh;
+  height: calc(100vh - 120px);
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .Animations .IMAGEM {
@@ -109,6 +160,10 @@ main {
     transform 0.6s ease var(--reveal-delay, 0ms);
 }
 
+.signature-logos > div {
+  background-color: var(--logo-background);
+}
+
 .Animations figure {
   margin: 0 0 10px;
 }
@@ -157,6 +212,7 @@ main {
   .descricao {
     position: static;
     width: 100%;
+    height: auto;
     margin-bottom: 0;
     max-height: none;
     overflow: visible;
@@ -164,7 +220,9 @@ main {
 
   .Animations {
     width: 100%;
+    height: auto;
     min-height: 0;
+    overflow: visible;
   }
 }
 
