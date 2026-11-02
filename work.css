@@ -258,8 +258,15 @@
 }
 
 @media (max-width: 800px) {
+  main {
+    padding: 68px 16px 30px;
+  }
+
   .home-banner {
     width: calc(100% + 32px);
+    min-height: calc(100vh - 68px);
+    min-height: calc(100svh - 68px);
+    min-height: calc(100dvh - 68px);
     margin-left: -16px;
     padding: clamp(1.5rem, 6vw, 2.5rem);
   }

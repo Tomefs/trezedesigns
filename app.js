@@ -316,7 +316,15 @@ const initializeBannerWord = () => {
     return;
   }
 
-  const words = ["strategy", "identity", "design", "motion", "storytelling"];
+  const words = [
+    "unique",
+    "daring",
+    "original",
+    "bold",
+    "inventive",
+    "unconventional",
+    "audacious",
+  ];
   let wordIndex = 0;
   let characterIndex = words[0].length;
   let deleting = true;

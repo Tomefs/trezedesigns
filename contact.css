@@ -45,7 +45,8 @@
   max-height: calc(100dvh - 2rem);
   margin: auto;
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
   border: 1px solid var(--control-border);
@@ -167,7 +168,47 @@
   .contact-trigger {
     font-size: var(--type-body);
   }
+}
 
+@media (max-width: 600px) {
+  .contact-dialog {
+    width: calc(100vw - 1rem);
+    max-height: calc(100vh - 1rem);
+    max-height: calc(100dvh - 1rem);
+  }
+
+  .contact-dialog__content {
+    padding: 1.25rem 1rem;
+  }
+
+  .contact-dialog__content > h2 {
+    padding-right: 1.5rem;
+    font-size: clamp(1.1rem, 5vw, 1.4rem);
+  }
+
+  .contact-dialog__content > p {
+    font-size: 0.875rem;
+  }
+
+  .contact-form__field input,
+  .contact-form__field textarea {
+    font-size: 16px;
+  }
+
+  .contact-form__field input {
+    min-height: 44px;
+  }
+
+  .contact-form__field textarea {
+    height: 7rem;
+    resize: vertical;
+  }
+
+  .contact-form__submit {
+    width: 100%;
+    min-height: 44px;
+    justify-self: stretch;
+  }
 }
 
 @media (max-height: 650px) {
