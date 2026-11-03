@@ -3,14 +3,16 @@
   isolation: isolate;
   display: flex;
   width: calc(100% + 100px);
-  min-height: min(36rem, calc(100vh - 180px));
-  min-height: min(36rem, calc(100svh - 180px));
+  min-height: min(calc(36rem + 80px), calc(100vh - 100px));
+  min-height: min(calc(36rem + 80px), calc(100svh - 100px));
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  margin-top: -80px;
   margin-left: -50px;
   margin-bottom: clamp(3rem, 8vw, 7rem);
   padding: clamp(1.5rem, 6vw, 4rem);
+  padding-top: calc(clamp(1.5rem, 6vw, 4rem) + 80px);
   overflow: hidden;
   background: #000;
   color: #fff;
@@ -52,8 +54,6 @@
   vertical-align: baseline;
   white-space: nowrap;
   font: inherit;
-  font-family: "Roboto Slab", Rockwell, "American Typewriter", serif;
-  font-style: italic;
 }
 
 .home-banner__description {
@@ -94,7 +94,8 @@
 
 .portfolio-heading {
   margin-bottom: 1.25rem;
-  font-family: ltsuperiorBold;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 900;
   font-size: clamp(1.1rem, 2vw, 1.75rem);
   text-transform: uppercase;
 }
@@ -222,10 +223,37 @@
 }
 
 @media (hover: none) {
+  .portfolio .reveal {
+    margin-bottom: 1.5rem;
+  }
+
+  .portfolio .reveal > .box {
+    aspect-ratio: auto;
+    overflow: visible;
+  }
+
+  .portfolio .reveal > .box > a {
+    position: static;
+  }
+
+  .portfolio img {
+    height: auto;
+  }
+
   .portfolio .text {
-    justify-content: flex-end;
-    background: linear-gradient(transparent, rgb(0 0 0 / 70%));
+    position: static;
+    height: auto;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0.75rem 0 0;
+    background: none;
+    color: var(--page-foreground);
+    text-align: left;
     opacity: 1;
+  }
+
+  .portfolio .text .project-tags {
+    justify-content: flex-start;
   }
 
   .portfolio .text h3 {
@@ -265,11 +293,13 @@
 
   .home-banner {
     width: calc(100% + 32px);
-    min-height: calc(100vh - 68px);
-    min-height: calc(100svh - 68px);
-    min-height: calc(100dvh - 68px);
+    min-height: 100vh;
+    min-height: 100svh;
+    min-height: 100dvh;
+    margin-top: -68px;
     margin-left: -16px;
     padding: clamp(1.5rem, 6vw, 2.5rem);
+    padding-top: calc(clamp(1.5rem, 6vw, 2.5rem) + 68px);
   }
 
   .home-banner h1 {

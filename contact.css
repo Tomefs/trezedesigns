@@ -39,6 +39,10 @@
 }
 
 .contact-dialog {
+  --page-background: #fff;
+  --page-foreground: #000;
+  --control-border: #000;
+  color-scheme: light;
   width: min(92vw, 560px);
   max-width: none;
   max-height: calc(100vh - 2rem);

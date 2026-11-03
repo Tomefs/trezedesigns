@@ -5,6 +5,16 @@ const contactTriggers = document.querySelectorAll(".contact-trigger");
 const contactCloseButton = document.querySelector(".contact-dialog__close");
 const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
 const siteNavigation = document.querySelector("#site-navigation");
+const navBar = document.querySelector("header .navBar");
+
+if (navBar instanceof HTMLElement) {
+  const updateScrolledState = () => {
+    navBar.classList.toggle("scrolled", window.scrollY > 0);
+  };
+
+  updateScrolledState();
+  window.addEventListener("scroll", updateScrolledState, { passive: true });
+}
 
 if (
   mobileMenuToggle instanceof HTMLButtonElement &&
