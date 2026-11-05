@@ -22,6 +22,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Tanker";
+  src: url(fonts/Tanker-Regular.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 :root {
   --page-background: #000;
   --page-foreground: #f3eee8;
@@ -63,7 +71,7 @@ html {
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: "Bitter", Rockwell, "American Typewriter", serif;
+  font-family: "Satoshi", sans-serif;
 }
 
 @keyframes fade-up {
@@ -116,9 +124,40 @@ button:focus-visible {
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4,
+h5,
+h6,
+h1 *,
+h2 *,
+h3 *,
+h4 *,
+h5 *,
+h6 * {
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.portfolio-heading {
+  font-family: "Tanker", sans-serif;
+  font-weight: 400;
+}
+
+.portfolio-heading,
+.portfolio .text h3,
+.motion-card__text h2 {
   font-family: "Satoshi", sans-serif;
   font-weight: 900;
+}
+
+h1,
+h2 {
   text-transform: uppercase;
 }
 
@@ -133,8 +172,8 @@ h2 {
 }
 
 h3 {
-  font-family: "Satoshi", sans-serif;
-  font-weight: 900;
+  font-family: "Tanker", sans-serif;
+  font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.2;
 }
@@ -265,10 +304,6 @@ header .navBar > a:focus-visible object {
   color: var(--page-foreground);
 }
 
-.navBar h2 {
-  font-family: "Bitter", Rockwell, "American Typewriter", serif;
-}
-
 .navBar .icon a {
   position: relative;
   z-index: 0;
@@ -313,10 +348,6 @@ footer .bar {
   text-align: center;
   justify-content: space-between;
   padding: 20px 50px 20px 50px;
-}
-
-footer .bar h2 {
-  font-family: "Bitter", Rockwell, "American Typewriter", serif;
 }
 
 footer h2:hover,
