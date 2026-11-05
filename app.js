@@ -1,15 +1,5 @@
 document.documentElement.classList.add("js");
 
-const bannerVideo = document.querySelector(".home-banner__video");
-if (bannerVideo) {
-  const bannerSource = bannerVideo.querySelector("source");
-  if (bannerSource) {
-    const videoIndex = Math.floor(Math.random() * 12) + 1;
-    bannerSource.src = `UC/DG/anim${videoIndex}.mp4`;
-    bannerVideo.load();
-  }
-}
-
 const projects = window.portfolioProjects || [];
 const projectList = document.querySelector(".portfolio[data-project-list]");
 const projectDetail = document.querySelector("[data-project-detail]");

@@ -372,6 +372,18 @@ footer p:hover {
 }
 
 @media (max-width: 800px) {
+  h1 {
+    font-size: clamp(2.5rem, 10vw, 4.5rem);
+  }
+
+  h2 {
+    font-size: clamp(1.7rem, 6.5vw, 2.25rem);
+  }
+
+  h3 {
+    font-size: 1.35rem;
+  }
+
   main {
     animation: fade-up 1s ease-in-out;
     padding: 130px 16px 30px;
