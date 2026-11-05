@@ -5,7 +5,6 @@
 .motion-intro h1 {
   margin-bottom: 0.5rem;
   font-size: clamp(1.75rem, 4vw, 3rem);
-  text-transform: uppercase;
 }
 
 @media (max-width: 800px) {
@@ -91,7 +90,7 @@
 
 .motion-card__text h2 {
   margin-bottom: 0.25rem;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.2;
 }
 
@@ -119,7 +118,7 @@
 
 @media (hover: none) {
   .motion-card__text h2 {
-    font-size: 1.2rem;
+    font-size: 1.35rem;
   }
 
   .motion-card--liga-portugal {
@@ -150,8 +149,8 @@
     opacity: 1;
   }
 
-  .motion-card {
-    margin-bottom: 1.5rem;
+  .motion-card.reveal {
+    margin-bottom: 3rem;
   }
 }
 
@@ -164,5 +163,9 @@
 @media (max-width: 600px) {
   .motion-grid {
     columns: 1;
+  }
+
+  .motion-card.reveal {
+    margin-bottom: 3rem;
   }
 }

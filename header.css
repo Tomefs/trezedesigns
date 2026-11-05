@@ -30,6 +30,22 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Kings";
+  src: url(fonts/Kings-Regular.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cinzel Decorative";
+  src: url(fonts/CinzelDecorative-Bold.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
 :root {
   --page-background: #0b090a;
   --page-foreground: #f5f3f4;
@@ -146,20 +162,15 @@ h4,
 h5,
 h6,
 .portfolio-heading {
-  font-family: "Tanker", sans-serif;
-  font-weight: 400;
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 700;
 }
 
 .portfolio-heading,
 .portfolio .text h3,
 .motion-card__text h2 {
-  font-family: "Satoshi", sans-serif;
-  font-weight: 900;
-}
-
-h1,
-h2 {
-  text-transform: uppercase;
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 700;
 }
 
 h1 {
@@ -173,8 +184,8 @@ h2 {
 }
 
 h3 {
-  font-family: "Tanker", sans-serif;
-  font-weight: 400;
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.2;
 }
