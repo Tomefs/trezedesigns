@@ -52,11 +52,16 @@
   transform: translateY(0);
 }
 
+.motion-card.reveal.active:hover,
+.motion-card.reveal.active:focus-within {
+  background: var(--accent);
+}
+
 .motion-card video {
   display: block;
   width: 100%;
   height: auto;
-  background: #111;
+  background: var(--page-background);
   transition: opacity 0.3s ease;
 }
 
@@ -78,7 +83,7 @@
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  color: #fff;
+  color: var(--page-foreground);
   text-align: center;
   opacity: 0;
   transition: opacity 0.4s ease;
@@ -96,7 +101,7 @@
 }
 
 .motion-card__text a {
-  color: #fff;
+  color: var(--page-foreground);
   font-size: var(--type-body);
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -109,7 +114,7 @@
 
 .motion-card.reveal.active:hover video,
 .motion-card.reveal.active:focus-within video {
-  opacity: 0.4;
+  opacity: 0.2;
 }
 
 @media (hover: none) {

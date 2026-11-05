@@ -31,12 +31,13 @@
 }
 
 :root {
-  --page-background: #000;
-  --page-foreground: #f3eee8;
-  --control-border: #b6aaa0;
-  --logo-background: whitesmoke;
-  --scrollbar-thumb: rgba(243, 238, 232, 0.3);
-  --scrollbar-thumb-hover: rgba(243, 238, 232, 0.55);
+  --page-background: #0b090a;
+  --page-foreground: #f5f3f4;
+  --accent: #e5383b;
+  --control-border: #e5383b;
+  --logo-background: #f5f3f4;
+  --scrollbar-thumb: rgba(245, 243, 244, 0.3);
+  --scrollbar-thumb-hover: rgba(245, 243, 244, 0.55);
   color-scheme: dark;
   --type-body: 0.875rem;
   --type-subtitle: 1.35rem;
@@ -205,7 +206,7 @@ p {
 
 .navBar a,
 .bar a {
-  color: whitesmoke;
+  color: var(--page-foreground);
   text-align: left;
 }
 
@@ -317,7 +318,7 @@ header .navBar > a:focus-visible object {
   position: absolute;
   z-index: -1;
   inset: 0;
-  background: var(--page-foreground);
+  background: var(--accent);
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -331,7 +332,7 @@ header .navBar > a:focus-visible object {
 
 .navBar .icon a:hover,
 .navBar .icon a:focus-visible {
-  color: var(--page-background);
+  color: var(--page-foreground);
 }
 
 .navBar .icon a p {
@@ -421,9 +422,21 @@ footer p:hover {
     justify-self: start;
     gap: 5px;
     border: 1px solid var(--control-border);
-    background: transparent;
+    background: var(--accent);
     color: var(--page-foreground);
     cursor: pointer;
+    box-shadow: 0 0 0 transparent;
+    transform: translate(0, 0);
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  }
+
+  .mobile-menu-toggle:hover,
+  .mobile-menu-toggle:focus-visible,
+  .mobile-menu-toggle[aria-expanded="true"] {
+    background: var(--accent);
+    color: var(--page-foreground);
+    box-shadow: 4px 4px 0 var(--page-foreground);
+    transform: translate(-4px, -4px);
   }
 
   .mobile-menu-toggle span {
@@ -431,7 +444,7 @@ footer p:hover {
     width: 18px;
     height: 1px;
     background: currentColor;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+    transition: transform 0.2s ease, opacity 0.2s ease, background-color 0.2s ease;
   }
 
   .mobile-menu-toggle[aria-expanded="true"] span:first-child {
