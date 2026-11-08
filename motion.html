@@ -258,8 +258,49 @@
             <input id="contact-email" name="email" type="email" autocomplete="email" required />
           </div>
           <div class="contact-form__field">
-            <label for="contact-message">Tell me about your brand, audience, and goals</label>
-            <textarea id="contact-message" name="message" rows="5" required></textarea>
+            <label class="contact-form__subtitle" for="contact-message">Project details</label>
+            <p id="contact-message-hint">Share your vision for the project, who it is for, and any details that will help bring it to life.</p>
+            <textarea id="contact-message" name="message" rows="5" aria-describedby="contact-message-hint" required></textarea>
+          </div>
+          <div class="contact-form__field">
+            <label for="contact-budget">Estimated budget (EUR)</label>
+            <select id="contact-budget" name="estimated_budget">
+              <option value="">Select a budget range</option>
+              <option value="Under €500">Under €500</option>
+              <option value="€500–€1,000">€500–€1,000</option>
+              <option value="€1,000–€2,500">€1,000–€2,500</option>
+              <option value="€2,500–€5,000">€2,500–€5,000</option>
+              <option value="€5,000+">€5,000+</option>
+              <option value="Not sure">Not sure</option>
+            </select>
+          </div>
+          <div class="contact-form__field">
+            <label for="contact-project-type">Type of project</label>
+            <select id="contact-project-type" name="project_type">
+              <option value="">Select a project type</option>
+              <option value="Rebrand">Rebrand</option>
+              <option value="Visual identity">Visual identity</option>
+              <option value="Brand strategy">Brand strategy</option>
+              <option value="Packaging">Packaging</option>
+              <option value="Digital design">Digital design</option>
+              <option value="Motion design">Motion design</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="contact-form__field">
+            <label for="contact-work-time">Estimated work time</label>
+            <select id="contact-work-time" name="estimated_work_time">
+              <option value="">Select an estimated timeline</option>
+              <option value="1–2 weeks">1–2 weeks</option>
+              <option value="2–4 weeks">2–4 weeks</option>
+              <option value="1–2 months">1–2 months</option>
+              <option value="More than 2 months">More than 2 months</option>
+              <option value="Flexible / not sure">Flexible / not sure</option>
+            </select>
+          </div>
+          <div class="contact-form__field">
+            <label for="contact-audience">Target audience</label>
+            <textarea id="contact-audience" name="target_audience" rows="3"></textarea>
           </div>
           <button class="contact-form__submit" type="submit">Send message</button>
         </form>

@@ -36,14 +36,24 @@ const createProjectNavigation = (project) => {
     const link = document.createElement("a");
     link.className = `project-navigation__link project-navigation__link--${direction}`;
     link.href = `project.html?id=${encodeURIComponent(neighbor.id)}`;
+    link.setAttribute(
+      "aria-label",
+      `${direction === "previous" ? "Previous" : "Next"} project: ${neighbor.title}`,
+    );
 
-    const label = document.createElement("span");
-    label.textContent =
-      direction === "previous" ? "Previous project" : "Next project";
+    const arrow = document.createElement("span");
+    arrow.className = "project-navigation__arrow";
+    arrow.setAttribute("aria-hidden", "true");
+    arrow.textContent = direction === "previous" ? "←" : "→";
 
     const title = document.createElement("span");
+    title.className = "project-navigation__title";
     title.textContent = neighbor.title;
-    link.append(label, title);
+    if (direction === "previous") {
+      link.append(arrow, title);
+    } else {
+      link.append(title, arrow);
+    }
     navigation.append(link);
   };
 
